@@ -27,7 +27,7 @@ body {
 /* Main Content */
 section {
     width: 100%;
-    padding-top: 70px;
+    padding-top: 90px;
     padding-bottom: 120px;
 }
 
@@ -97,13 +97,13 @@ h1 {
     /* margin: 0 auto; */
     /* width: fit-content; */
     /* text-align: center; */
-    font-size: 3.5rem;
+    font-size: 4.0rem;
     letter-spacing: 0.4rem;
     text-transform: uppercase;
     border-bottom: 1.5px solid white;
     /* border-bottom: 1.5px solid rgb(255, 255, 255, 0.8); */
     padding-bottom: 10px;
-    margin-bottom: 35px;
+    margin-bottom: 100px;
     /* padding-left: 10px; */
     /* padding-right: 10px; */
 }
@@ -331,7 +331,7 @@ section.education {
 
 
 section.education h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 25px;
 }
 
@@ -339,12 +339,13 @@ section.education h3 {
 #UCSD {
     text-align: center;
     margin-bottom: 0px;
+    font-size: 2.6rem;
 }
 
 
 #UCSD_pics {
     margin-top: 55px;
-    margin-bottom: 65px;
+    margin-bottom: 120px;
 }
 
 
@@ -570,34 +571,52 @@ div.footer-bottom p {
     nav.sidebar {
         display: none;
     }
+   
     
     div.container {
         max-width: 90%;  
     }
 
+
     h1 {
         font-size: 2.8rem;
         letter-spacing: 0.2rem;
         padding-bottom: 8px;
+        margin-bottom: 45px;
     }
+
 
     #experience_header {
         font-size: 2.3rem;
         letter-spacing: 0.15rem;
     }
 
+
     h2 {
         font-size: 1.8rem;
         margin-bottom: 35px;
     }
 
+
+    #UCSD {
+        font-size: 1.8rem;
+    }
+
+
+    #UCSD_pics {
+        margin-bottom: 65px;
+    }
+
+
     h3 {
         font-size: 1.0rem;
     }
 
+
     h4 {
         font-size: 1.0rem;
     }
+
 
     p {
         font-size: 1.0rem;
@@ -605,10 +624,17 @@ div.footer-bottom p {
         line-height: 1.4rem;
     }
 
+
     section {
         padding-top: 60px;
         padding-bottom: 80px;
     }
+
+
+    section ul {
+        margin-left: 12px;
+    }
+
 
     section li {
         font-size: 1rem;
@@ -616,9 +642,11 @@ div.footer-bottom p {
         margin-bottom: 10px;
     }
     
+
     section.education h3 {
         font-size: 1.2rem;
     }
+
 
     div.section-divider {
         max-width: 75%;
