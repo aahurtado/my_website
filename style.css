@@ -52,6 +52,7 @@ div.section-divider {
     margin: 125px auto;
 }
 
+
 div.container {
     max-width: 60%;  
     margin: 0 auto;
@@ -97,7 +98,7 @@ h1 {
     /* margin: 0 auto; */
     /* width: fit-content; */
     /* text-align: center; */
-    font-size: 4.0rem;
+    font-size: 4.3rem;
     letter-spacing: 0.4rem;
     text-transform: uppercase;
     border-bottom: 1.5px solid white;
@@ -109,9 +110,14 @@ h1 {
 }
 
 
+h1.long-header {
+    font-size: 4.0rem;
+}
+
+
 h2 {
     text-align: left;
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     margin-bottom: 50px;
     letter-spacing: 0.1rem;
 }
@@ -136,11 +142,11 @@ p {
     /* text-align: center; */
     /* margin-top: 30px; */
     margin-bottom: 40px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     /* padding-left: 10px; */
     /* padding-right: 10px; */
     text-align: left;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
 }
 
 
@@ -205,6 +211,7 @@ nav.topbar .nav-links.left a {
     margin-left: 12px; 
 }
 
+
 nav.topbar .nav-links.right a {
     margin-right: 12px; 
 }
@@ -213,6 +220,7 @@ nav.topbar .nav-links.right a {
 /* nav.topbar .nav-links.left a:first-child {
     margin-left: 12px; 
 }
+
 
 nav.topbar .nav-links.right a:last-child {
     margin-right: 12px; 
@@ -331,19 +339,19 @@ section.education {
 
 
 section.education h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 25px;
 }
 
 
-#UCSD {
+#UCSD-header {
     text-align: center;
     margin-bottom: 0px;
-    font-size: 2.6rem;
+    font-size: 2.9rem;
 }
 
 
-#UCSD_pics {
+#UCSD-pics {
     margin-top: 55px;
     margin-bottom: 120px;
 }
@@ -422,7 +430,6 @@ div.image-container figure {
 }
 
 
-
 div.image-container a img {
     max-width: 100%;
     height: auto;
@@ -475,11 +482,13 @@ div.image-container figure:only-child {
     align-items: center;
 }
 
+
 .fullscreen img {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
 }
+
 
 
 
@@ -587,8 +596,8 @@ div.footer-bottom p {
     }
 
 
-    #experience_header {
-        font-size: 2.3rem;
+    h1.long-header {
+        font-size: 2.2rem;
         letter-spacing: 0.15rem;
     }
 
@@ -599,12 +608,12 @@ div.footer-bottom p {
     }
 
 
-    #UCSD {
+    #UCSD-header {
         font-size: 1.8rem;
     }
 
 
-    #UCSD_pics {
+    #UCSD-pics {
         margin-bottom: 65px;
     }
 
