@@ -53,7 +53,7 @@ div.section-divider {
 }
 
 div.container {
-    max-width: 50%;  
+    max-width: 60%;  
     margin: 0 auto;
 }
 
@@ -623,5 +623,23 @@ div.footer-bottom p {
     div.section-divider {
         max-width: 75%;
         margin: 100px auto;
+    }
+}
+
+
+
+
+/* For ultrawide screens (2560px and up) */
+@media screen and (min-width: 2560px) {
+    div.container {
+        max-width: 50%;
+    }
+}
+
+
+/* For ultrawide screens (3440px and up) */
+@media screen and (min-width: 3440px) {
+    div.container {
+        max-width: 40%;
     }
 }
