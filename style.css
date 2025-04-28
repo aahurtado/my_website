@@ -40,6 +40,10 @@
     --half-image-gap: 10px;
 
 
+    /* Font Sizes */
+    --font-paragraph-size: 1.2rem;
+
+
     /* Colors */
     --nav-topbar-background-color: rgb(35, 39, 47);
     --nav-sidebar-background-color: rgb(18, 28, 95);
@@ -95,13 +99,14 @@ section {
 
 section ul {
     text-align: left;
+    margin-bottom: 4%;
 }
 
 
 section li {
     margin-bottom: 12px;
     font-weight: normal;
-    font-size: 1.1rem;
+    font-size: var(--font-paragraph-size);
     line-height: 1.5rem;
     /* color: white; */
 }
@@ -127,10 +132,30 @@ div.heading-container {
 }
 
 
+div.text-container.xl-gap {
+    margin-bottom: 15%;
+}
+
+
+div.text-container.large-gap {
+    margin-bottom: 12%;
+}
+
+
+div.text-container.medium-gap {
+    margin-bottom: 7%;
+}
+
+
+div.text-container.small-gap {
+    margin-bottom: 5%;
+}
+
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%; 
-    margin-top: 75px;
+    margin: 10% 0;
 }
 
 
@@ -215,7 +240,7 @@ p {
     /* text-align: center; */
     /* margin-top: 30px; */
     margin-bottom: 40px;
-    font-size: 1.2rem;
+    font-size: var(--font-paragraph-size);
     /* padding-left: 10px; */
     /* padding-right: 10px; */
     text-align: left;
@@ -553,7 +578,7 @@ div.image-container figure:only-child {
     gap: 20px;
     /* width: 100%;  */
     max-width: 100%; 
-    margin: 5% 0;
+    margin: 8% 0;
     box-sizing: border-box;
 
     opacity: 0;
@@ -732,6 +757,37 @@ div.footer-bottom p {
     }
 
 
+    div.text-container.xl-gap {
+        margin-bottom: 20%;
+    }
+
+
+    div.text-container.large-gap {
+        margin-bottom: 17%;
+    }
+
+    
+    div.text-container.medium-gap {
+        margin-bottom: 13%;
+    }
+
+
+    div.text-container.small-gap {
+        margin-bottom: 7%;
+    }
+
+
+    .video-container {
+        margin-top: 20%;
+        margin-bottom: 12%;
+    }
+
+
+    .image-container {
+        margin: 10% 0;
+    }
+
+
     nav.topbar {
         padding: 3px 0;
     }
@@ -797,6 +853,7 @@ div.footer-bottom p {
 
     section ul {
         margin-left: 12px;
+        margin-bottom: 10%;
     }
 
 
