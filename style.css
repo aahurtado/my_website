@@ -32,7 +32,7 @@
     --website-main-width-ultrawide-2560: 50%;
     --website-main-width-ultrawide-3440: 40%;
 
-    --nav-topbar-height: 70px;
+    --nav-topbar-height-offset: 70px;
 
     --footer-content-min-width: 200px;
 
@@ -68,7 +68,7 @@ html {
     font-weight: 400;
     font-size: 16px;
     scroll-behavior: smooth;
-    scroll-padding-top: var(--nav-topbar-height);
+    scroll-padding-top: var(--nav-topbar-height-offset);
     overflow-x: hidden; 
 }
 
@@ -322,7 +322,7 @@ nav.sidebar {
     width: fit-content; 
     height: fit-content; 
     position: fixed; 
-    top: var(--nav-topbar-height);
+    top: var(--nav-topbar-height-offset);
     right: 0;
     /* padding: 20px; */
     /* background-color: #20232a; */
@@ -388,7 +388,7 @@ section.about_me {
     /* background-color: #1d2339; */
     background-color: var(--color-classic-blue);
     /* background-color: lightblue; */
-    margin-top: var(--nav-topbar-height);
+    margin-top: var(--nav-topbar-height-offset);
     /* scroll-margin-top: 70px; */
 }
 
@@ -712,10 +712,25 @@ div.footer-bottom p {
     nav.sidebar {
         display: none;
     }
-   
+
+
+    :root {
+        --nav-topbar-height-offset: 60px;
+    }
     
+       
     div.container {
         max-width: var(--website-main-width-mobile);  
+    }
+
+
+    nav.topbar {
+        padding: 10px 0;
+    }
+
+
+    nav.topbar .nav-links a {
+        font-size: 15px;
     }
 
 
