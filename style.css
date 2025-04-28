@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 1px solid red; */
 }
 
 
@@ -38,6 +39,9 @@
 
     --half-width: 50%;
     --half-image-gap: 10px;
+
+    --text-max-width: 85%;
+    --text-max-width-mobile: 95%;
 
 
     /* Font Sizes */
@@ -98,7 +102,10 @@ section {
 
 
 section ul {
+    max-width: var(--text-max-width);
     text-align: left;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 4%;
 }
 
@@ -235,11 +242,13 @@ h4 {
 
 
 p {
+    max-width: var(--text-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
     /* color: white; */
-    margin: 0 auto;
     /* text-align: center; */
     /* margin-top: 30px; */
-    margin-bottom: 40px;
     font-size: var(--font-paragraph-size);
     /* padding-left: 10px; */
     /* padding-right: 10px; */
@@ -839,6 +848,7 @@ div.footer-bottom p {
 
 
     p {
+        max-width: var(--text-max-width-mobile);
         font-size: 1.0rem;
         margin-bottom: 30px;
         line-height: 1.4rem;
@@ -852,7 +862,8 @@ div.footer-bottom p {
 
 
     section ul {
-        margin-left: 12px;
+        margin-left: 5%;
+        max-width: var(--text-max-width-mobile);
         margin-bottom: 10%;
     }
 
