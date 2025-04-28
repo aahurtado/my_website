@@ -715,7 +715,7 @@ div.footer-bottom p {
 
 
     :root {
-        --nav-topbar-height-offset: 58px;
+        --nav-topbar-height-offset: 60px;
     }
     
        
@@ -730,7 +730,7 @@ div.footer-bottom p {
 
 
     nav.topbar .nav-links a {
-        font-size: 12px;
+        font-size: 13px;
     }
 
 
