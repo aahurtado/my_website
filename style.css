@@ -50,6 +50,8 @@
     --footer-border-color: rgba(255, 255, 255, 0.15);
     --footer-bottom-text-color: rgba(255, 255, 255, 0.5);
 
+    --color-classic-blue: rgb(15, 76, 129);
+
 
     /* Transitions */
     --nav-link-transition-duration: 0.5s;
@@ -384,7 +386,7 @@ nav.sidebar li.active {
 /* Main Sections */
 section.about_me {
     /* background-color: #1d2339; */
-    background-color: rgb(61, 49, 105);
+    background-color: var(--color-classic-blue);
     /* background-color: lightblue; */
     margin-top: var(--nav-topbar-height);
     /* scroll-margin-top: 70px; */
