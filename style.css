@@ -52,9 +52,12 @@
 
 
     /* Transitions */
-    --nav-link-transition-duration: 0.7s;
+    --nav-link-transition-duration: 0.5s;
     --transition-duration-quick: 0.3s;
+    --transition-style: ease-out;
     --transition-delay: 0.1s;
+
+    --image-scale-hover: 1.05;
   }
 
 
@@ -263,7 +266,7 @@ nav.topbar .nav-links li {
 
     transition-property: background-color, border-color;
     transition-duration: var(--nav-link-transition-duration);
-    transition-timing-function: ease-out;
+    transition-timing-function: var(--transition-style);
     transition-delay: var(--transition-delay);
 }
 
@@ -345,7 +348,7 @@ nav.sidebar li {
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    transition: background-color var(--nav-link-transition-duration) ease-out var(--transition-delay);  
+    transition: background-color var(--nav-link-transition-duration) var(--transition-style) var(--transition-delay);  
 }
 
 
@@ -466,14 +469,14 @@ div.image-container img {
     height: auto;
     transition-property: transform, box-shadow;
     transition-duration: 0.4s;
-    transition-timing-function: ease-out;
+    transition-timing-function: var(--transition-style);
     transition-delay: 0.1s;
 }
 
 
 div.image-container img:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-    transform: scale(1.04);
+    transform: scale(var(--image-scale-hover));
 }
 
 
@@ -565,7 +568,7 @@ div.image-container figure:only-child {
 
     transition-property: transform, box-shadow;
     transition-duration: var(--transition-duration-quick);
-    transition-timing-function: ease-out;
+    transition-timing-function: var(--transition-style);
     transition-delay: var(--transition-delay);
 }
   
@@ -580,8 +583,8 @@ div.image-container figure:only-child {
 
 
 div.image-container img:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-    transform: scale(1.04);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2), 0 1.5rem 1.5rem rgba(0, 0, 0, 0.4);
+    transform: scale(var(--image-scale-hover));
 }
 
 
@@ -668,7 +671,7 @@ div.footer-content p {
 div.footer-content a {
     color: white;
     text-decoration: none;
-    transition: color var(--transition-duration-quick) ease var(--transition-delay);
+    transition: color var(--transition-duration-quick) var(--transition-style) var(--transition-delay);
 }
 
 
