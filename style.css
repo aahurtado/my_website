@@ -88,6 +88,7 @@ body {
 section {
     width: 100%;
     padding-top: 90px;
+    /* padding-top: 6%; */
     padding-bottom: 120px;
 }
 
@@ -401,7 +402,8 @@ div.tech_skills h4 {
 section.education {
     /* background-color: #82d8dc;  */
     /* background-color: lightblue; */
-    background-color: rgb(100, 169, 193);
+    /* background-color: rgb(100, 169, 193); */
+    background-color: rgb(71, 161, 191);
 }
 
 
@@ -707,7 +709,7 @@ div.footer-bottom p {
 
 
 /* ***************************************************************************** */
-/* Handle mobile devices */
+/* Handle mobile devices with width <= 767px */
 @media screen and (max-width: 767px) {
     nav.sidebar {
         display: none;
@@ -715,7 +717,7 @@ div.footer-bottom p {
 
 
     :root {
-        --nav-topbar-height-offset: 60px;
+        --nav-topbar-height-offset: 59px;
     }
     
        
@@ -812,6 +814,15 @@ div.footer-bottom p {
 
 
 
+/* Adjust navbar height offset for widths >= 411px and <= 767px */
+@media screen and (min-width: 411px) and (max-width: 767px) {
+    :root {
+        --nav-topbar-height-offset: 44px;
+    }
+}
+
+
+
 
 /* For ultrawide screens (2560px and up) */
 @media screen and (min-width: 2560px) {
@@ -826,4 +837,8 @@ div.footer-bottom p {
     div.container {
         max-width: var(--website-main-width-ultrawide-3440);
     }
+
+    /* section {
+        padding-top: 4%;
+    } */
 }
