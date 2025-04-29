@@ -783,6 +783,11 @@ div.footer-bottom p {
     :root {
         --nav-topbar-height-offset: 59px;
     }
+
+
+    .progress-container {
+        top: var(--nav-topbar-height-offset);
+    }
     
        
     div.container {
