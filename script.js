@@ -15,6 +15,7 @@ function openFullscreen(img) {
 
 
 
+
 function updateActiveSection() {
     // Get all sections
     const sections = document.querySelectorAll('section');
@@ -46,9 +47,6 @@ function updateActiveSection() {
 }
 
 
-// Add scroll event listener
-window.addEventListener('scroll', updateActiveSection);
-
 
 
 function updateCopyrightYear() {
@@ -62,8 +60,30 @@ function updateCopyrightYear() {
 }
 
 
+
+
+function updateProgressBar() {
+    const winScroll = window.scrollY;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+}
+
+
+
+
+// Add event listeners
+window.addEventListener('scroll', () => {
+    updateActiveSection();
+    updateProgressBar();
+});
+
+
+
+
 // Add the function calls to the existing DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', () => {
     updateActiveSection();
     updateCopyrightYear();
+    updateProgressBar();
 });
