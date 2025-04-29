@@ -34,6 +34,7 @@
     --website-main-width-ultrawide-3440: 40%;
 
     --nav-topbar-height-offset: 70px;
+    --nav-topbar-side-margins: 12px;
 
     --footer-content-min-width: 200px;
 
@@ -46,6 +47,8 @@
 
     /* Font Sizes */
     --font-paragraph-size: 1.2rem;
+    --text-margin-bottom: 4%;
+    --text-margin-bottom-mobile: 12%;
 
 
     /* Colors */
@@ -90,14 +93,13 @@ body {
 }
 
 
-/* #TODO change width, height, padding, border, and margins to use % */
+/* width, height, padding, border, and margins should use % */
 /* ***************************************************************************** */
 /* Main Content */
 section {
     width: 100%;
-    padding-top: 90px;
-    /* padding-top: 6%; */
-    padding-bottom: 120px;
+    padding-top: 7%;
+    padding-bottom: 9%;
 }
 
 
@@ -106,12 +108,12 @@ section ul {
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 4%;
+    margin-bottom: var(--text-margin-bottom);
 }
 
 
 section li {
-    margin-bottom: 12px;
+    margin-bottom: 1%;
     font-weight: normal;
     font-size: var(--font-paragraph-size);
     line-height: 1.5rem;
@@ -122,7 +124,7 @@ section li {
 div.section-divider {
     border-bottom: 1px solid white;
     max-width: 70%;
-    margin: 125px auto;
+    margin: 14% auto;
 }
 
 
@@ -196,8 +198,8 @@ h1 {
     text-transform: uppercase;
     border-bottom: 1.5px solid white;
     /* border-bottom: 1.5px solid rgb(255, 255, 255, 0.8); */
-    padding-bottom: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 9%;
+    padding-bottom: 1%;
     /* padding-left: 10px; */
     /* padding-right: 10px; */
     transition: text-shadow 0.4s var(--transition-style) var(--transition-delay);
@@ -217,7 +219,7 @@ h1:hover {
 h2 {
     text-align: left;
     font-size: 2.6rem;
-    margin-bottom: 50px;
+    margin-bottom: 5%;
     letter-spacing: 0.1rem;
     transition: text-shadow 0.4s var(--transition-style) var(--transition-delay);
 }
@@ -231,7 +233,7 @@ h2:hover {
 h3 {
     text-align: left;
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 2.5%;
 }
 
 
@@ -245,7 +247,7 @@ p {
     max-width: var(--text-max-width);
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
+    margin-bottom: var(--text-margin-bottom);
     /* color: white; */
     /* text-align: center; */
     /* margin-top: 30px; */
@@ -321,12 +323,12 @@ nav.topbar .nav-links li {
 
 
 nav.topbar .nav-links.left a {
-    margin-left: 12px; 
+    margin-left: var(--nav-topbar-side-margins); 
 }
 
 
 nav.topbar .nav-links.right a {
-    margin-right: 12px; 
+    margin-right: var(--nav-topbar-side-margins); 
 }
 
 
@@ -461,7 +463,7 @@ section.education h3 {
 
 
 #UCSD-pics {
-    margin-top: 55px;
+    /* margin-top: 55px; */
     margin-bottom: 120px;
 }
 
@@ -473,7 +475,7 @@ section.experience {
 
 #centene_logo {
     background-color: white;
-    padding: 20px;
+    padding: 5%;
     /* border-radius: 5px; */
 }
 
@@ -486,7 +488,7 @@ section.projects {
 #freqtrade_logo {
     background-color: white;
     /* border-radius: 5px; */
-    margin: 15% auto;
+    padding: 5% 1%;
 }
 
 
@@ -678,7 +680,7 @@ div.image-container img:hover {
 footer { 
     background: var(--footer-background-color);
     width: 100%;
-    padding: 60px 0 20px;
+    padding: 4% 0 3%;
     color: white;
 }
 
@@ -697,23 +699,23 @@ div.footer-content {
     flex-grow: 1;
     flex-basis: 0;
     min-width: var(--footer-content-min-width);
-    margin: 25px 0;
+    margin: 2% 0;
 }
 
 
 div.footer-content h4 {
     color: white;
     font-size: 1.3rem;
-    margin-bottom: 15px;
+    margin-bottom: 5%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    padding-bottom: 10px;
+    padding-bottom: 2%;
     letter-spacing: 0.1rem;
 }
 
 
 div.footer-content p {
     max-width: 100%;
-    margin: 10px 0;
+    margin: 2.5% 0;
     font-size: 1.0rem;
     text-align: center;
 }
@@ -732,8 +734,8 @@ div.footer-content a:hover {
 
 
 div.footer-bottom {
-    margin-top: 40px;
-    padding-top: 55px;
+    margin-top: 3%;
+    padding-top: 3.5%;
     border-top: 1px solid var(--footer-border-color);
     font-size: 0.8rem;
     color: var(--footer-bottom-text-color);
@@ -811,8 +813,8 @@ div.footer-bottom p {
     h1 {
         font-size: 2.8rem;
         letter-spacing: 0.2rem;
-        padding-bottom: 8px;
-        margin-bottom: 45px;
+        margin-bottom: 16%;
+        padding-bottom: 3%;
     }
 
 
@@ -824,7 +826,7 @@ div.footer-bottom p {
 
     h2 {
         font-size: 1.8rem;
-        margin-bottom: 35px;
+        margin-bottom: 11%;
     }
 
 
@@ -834,12 +836,14 @@ div.footer-bottom p {
 
 
     #UCSD-pics {
-        margin-bottom: 65px;
+        /* margin-bottom: 65px; */
+        margin-bottom: 20%;
     }
 
 
     h3 {
         font-size: 1.0rem;
+        margin-bottom: 10%;
     }
 
 
@@ -852,28 +856,28 @@ div.footer-bottom p {
     p {
         max-width: var(--text-max-width-mobile);
         font-size: 1.0rem;
-        margin-bottom: 30px;
+        margin-bottom: var(--text-margin-bottom-mobile);
         line-height: 1.4rem;
     }
 
 
     section {
-        padding-top: 60px;
-        padding-bottom: 80px;
+        padding-top: 20%;
+        padding-bottom: 25%;
     }
 
 
     section ul {
         margin-left: 5%;
         max-width: var(--text-max-width-mobile);
-        margin-bottom: 10%;
+        margin-bottom: var(--text-margin-bottom-mobile);
     }
 
 
     section li {
         font-size: 1rem;
         line-height: 1.4rem;
-        margin-bottom: 10px;
+        margin-bottom: 3%;
     }
     
 
@@ -884,8 +888,32 @@ div.footer-bottom p {
 
     div.section-divider {
         max-width: 75%;
-        margin: 100px auto;
+        margin: 35% auto;
     }
+
+
+    footer { 
+        padding: 15% 0 10%;
+    }
+
+
+    div.footer-content {
+        margin: 10% 0;
+    }
+
+
+    div.footer-content h4 {
+        margin-bottom: 8%;
+    }
+
+    div.footer-content p {
+        margin: 6% 0;
+    }
+
+    div.footer-bottom {
+        margin-top: 12%;
+        padding-top: 17%;
+    } 
 }
 
 
@@ -905,6 +933,12 @@ div.footer-bottom p {
     div.container {
         max-width: var(--website-main-width-ultrawide-2560);
     }
+
+    section {
+        padding-top: 5%;
+        padding-bottom: 7%;
+    }
+
 }
 
 
@@ -914,7 +948,4 @@ div.footer-bottom p {
         max-width: var(--website-main-width-ultrawide-3440);
     }
 
-    /* section {
-        padding-top: 4%;
-    } */
 }
