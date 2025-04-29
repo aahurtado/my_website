@@ -672,6 +672,7 @@ div.image-container figure:only-child {
 
 .parallax-container-1 {
     background-image: url('./images/ucsd_lib2.png');
+    background-position: 50% 5vh;
 }
 
 
@@ -860,6 +861,7 @@ div.footer-bottom p {
 
     .parallax-container {
         background-attachment: scroll;
+        background-position: center;
         margin: 30% 0;
         height: 25vh;
     }
