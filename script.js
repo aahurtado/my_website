@@ -55,13 +55,14 @@ function updateCopyrightYear() {
     const copyrightElement = document.getElementById('copyright');
     if (copyrightElement) {
         const currentYear = new Date().getFullYear();
-        const startYear = 2025; // Change this to your website's creation year
+        const startYear = 2025;
         const yearText = startYear === currentYear ? startYear : `${startYear} - ${currentYear}`;
         copyrightElement.innerHTML = `Copyright &copy; ${yearText}`;
     }
 }
 
-// Add the function call to the existing DOMContentLoaded event listener
+
+// Add the function calls to the existing DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', () => {
     updateActiveSection();
     updateCopyrightYear();
