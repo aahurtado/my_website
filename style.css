@@ -35,6 +35,7 @@
 
     --nav-topbar-height-offset: 70px;
     --nav-topbar-side-margins: 12px;
+    --nav-progress-bar-height: 3px;
 
     --footer-content-min-width: 200px;
 
@@ -359,10 +360,10 @@ nav.topbar .nav-links li:hover {
 
 .progress-container {
     position: absolute;
-    top: calc(var(--nav-topbar-height-offset) - 3px);
+    top: calc(var(--nav-topbar-height-offset) - var(--nav-progress-bar-height));
     left: 0;
     width: 100%;
-    height: 3px;
+    height: var(--nav-progress-bar-height);
     background: transparent;
 }
 
