@@ -654,7 +654,6 @@ div.image-container figure:only-child {
 
 
 .parallax-container {
-    background-image: url('./images/ucsd_lib2.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -668,6 +667,19 @@ div.image-container figure:only-child {
     margin: 25% 0;
     overflow: hidden;
 }
+
+
+
+.parallax-container-1 {
+    background-image: url('./images/ucsd_lib2.png');
+}
+
+
+.parallax-container-2 {
+    background-image: url('./images/matrix.jpg');
+    filter: brightness(0.85);
+}
+
 
 
 
