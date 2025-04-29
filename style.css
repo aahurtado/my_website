@@ -653,6 +653,25 @@ div.image-container figure:only-child {
 
 
 
+.parallax-container {
+    background-image: url('./images/ucsd_lib2.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    left: calc(-50vw + 50%);
+
+    margin: 25% 0;
+    overflow: hidden;
+}
+
+
+
+
 div.image-container img:hover {
     box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.4), 0 0 2rem rgba(0, 0, 0, 0.2);
     transform: scale(var(--image-scale-hover));
@@ -824,6 +843,12 @@ div.footer-bottom p {
 
     .image-container {
         margin: 10% 0;
+    }
+
+
+    .parallax-container {
+        height: 40vh;
+        margin: 30% 0;
     }
 
 
