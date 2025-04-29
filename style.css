@@ -680,7 +680,8 @@ div.image-container img:hover {
 footer { 
     background: var(--footer-background-color);
     width: 100%;
-    padding: 4% 0 3%;
+    padding-top: 3%;
+    padding-bottom: 1%;
     color: white;
 }
 
@@ -699,7 +700,7 @@ div.footer-content {
     flex-grow: 1;
     flex-basis: 0;
     min-width: var(--footer-content-min-width);
-    margin: 2% 0;
+    margin-bottom: 3%;
 }
 
 
@@ -715,7 +716,7 @@ div.footer-content h4 {
 
 div.footer-content p {
     max-width: 100%;
-    margin: 2.5% 0;
+    margin-bottom: 3%;
     font-size: 1.0rem;
     text-align: center;
 }
@@ -734,20 +735,22 @@ div.footer-content a:hover {
 
 
 div.footer-bottom {
-    margin-top: 3%;
-    padding-top: 3.5%;
+    padding-top: 2.5%;
     border-top: 1px solid var(--footer-border-color);
     font-size: 0.8rem;
     color: var(--footer-bottom-text-color);
-    margin-left: auto;
-    margin-right: auto;
 } 
 
 
 div.footer-bottom p {
     text-align: center;
+    margin-bottom: 3.5%;
 }
 
+
+#copyright {
+    margin-bottom: 2%;
+}
 
 
 
@@ -914,6 +917,14 @@ div.footer-bottom p {
         margin-top: 12%;
         padding-top: 17%;
     } 
+
+    div.footer-bottom p {
+        margin-bottom: 20%;
+    }
+
+    #copyright {
+        margin-bottom: 15%;
+    }
 }
 
 
