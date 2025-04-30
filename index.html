@@ -246,6 +246,7 @@
                     Health care plans seek accreditation and measure performance through the administration and submission of HEDIS data. Health care plans must undergo a HEDIS Compliance Audit, which may only be performed by licensed organizations and certified auditors. NCQA publishes the results of the measures on their website. HEDIS was designed to allow consumers to compare health care plan performance and for national and regional benchmarks.
                 </p>
 
+                <h5>What I did:</h5>
                 <p>
                     On an annual basis NCQA adds, deletes, and revises the HEDIS measures. As a member of the backend healthcare analytics engine team, I was responsible for updating the codebase to implement new and revised measures. Afterwards, our Quality Assurance (QA) team would review the changes and ensure that the measures were implemented correctly. If any bugs or issues were found, I would work with the QA team to fix them.
                 </p>
@@ -288,13 +289,13 @@
 
 
                 <p>
-                    My first professional job was at <a href="https://www.epsilonsystems.com/" target="_blank" rel="noopener noreferrer">Epsilon Systems Solutions, Inc.</a> Epsilon Systems is a small National Defense contractor that provides total life-cycle support to defense systems such as research, analysis, system architecture, engineering, software development, assembly and testing, operational support, and maintenance and logistics. During my time here I worked as a full-time software engineer for the Navy SSDS program.
+                    My first professional job was at <a href="https://www.epsilonsystems.com/" target="_blank" rel="noopener noreferrer">Epsilon Systems Solutions, Inc.</a> Epsilon Systems is a small National Defense contractor that provides total life-cycle support to defense systems such as research, analysis, system architecture, engineering, software development, assembly and testing, and operational support. During my time here I worked as a full-time software engineer for the Navy SSDS program.
                 </p>
 
 
                 <h5>What is <a href="https://en.wikipedia.org/wiki/Ship_Self-Defense_System" target="_blank" rel="noopener noreferrer">SSDS?</a></h5>
                 <p>
-                    SSDS is the command and control system aboard amphibious ships and aircraft carriers. The Ship Self-Defense System (SSDS) is a combat system specifically designed for anti-air defense of aircraft carriers. Navy commanders depend on SSDS to effectively integrate their ship’s sensors and weapon systems to enable the timely engagement of the diverse spectrum of air threats to the ship.
+                    SSDS is the command and control system aboard amphibious ships and aircraft carriers. The Ship Self-Defense System (SSDS) is a combat system specifically designed for anti-air defense of aircraft carriers. Navy commanders depend on SSDS to effectively integrate their ship’s sensors and weapon systems to enable the timely engagement of the diverse spectrum of hostile air threats to their ship.
                 </p>
 
                 <p>
@@ -338,20 +339,71 @@
 
                 <h2>Cryptocurrency Trading Bot</h2>
 
+                <!-- <a href="https://en.wikipedia.org/wiki/Ship_Self-Defense_System" target="_blank" rel="noopener noreferrer">SSDS?</a> -->
+
+                <p>
+                    During the summer of 2022, I became smitten with the stock market and how to trade stocks. I dove into learning about investing and trading. I learned about Fundamental Analysis, Technical Analysis, and the investing philosophies of legendary investors such as Warren Buffett, Charlie Munger, and Peter Lynch. <a href="https://www.investopedia.com/" target="_blank" rel="noopener noreferrer">Investopedia</a> quickly became one of my favorite websites!
+                </p>
+
+                <p>
+                    As a software engineer, I wanted to incorporate my skills in software development with my newfound interest in stock trading. That was when I decided I wanted to challenege myself to build a trading bot. 
+                </p>
+
+                <div class="image-container">
+                    <img src="./images/stock_chart.webp" alt="Stock Chart" onclick="openFullscreen(this)" class="clickable-image"/>
+                </div>
+
+                <h5>What is <a href="https://www.investopedia.com/terms/t/technicalanalysis.asp" target="_blank" rel="noopener noreferrer">Technical Analysis?</a></h5>
+
+                <p>
+                    When it comes to stock market trading and investing there are two main schools of thought: Fundamental Analysis and Technical Analysis. Fundamental Analysis is the study of a company's financial statements, earnings, and other metrics to determine the fair value of their stock. This is the chief investing principle used by Warren Buffett and Charlie Munger. Fundamental analysts search for stocks trading at prices higher or lower than their real value. 
+                </p>
+
+                <p>
+                    Technical Analysis on the other hand is the study of a stock's price and volume data to predict future price movements in order to identify trading and investment opportunities. Technical analysts pretty much soley focus on analyzing stock charts to find patterns and trends that can then be used to make trading decisions. Unlike Fundamental Analysis, Technical Analysis is not concerned with the underlying fundamentals of a company. One of the main tools used by technical analysts are <a href="https://www.investopedia.com/terms/t/technicalindicator.asp" target="_blank" rel="noopener noreferrer">Technical Indicators</a>.
+                </p>
+
+                <h5>Technical Indicators</h5>
+                <p>
+                    Technical indicators are mathematical heuristics and patterns based on the price and volume data of a stock. They use formulas and algorithms to derive meaningful insights from price action data. The most popular and commonly used technical indicators include MACD, RSI, Bollinger Bands, and Moving Averages. A fascinating property about technical indicators is that since they are math based, they work not just on stocks but on any asset that has price and volume data (including cryptocurrencies). In fact, they probably work better on cryptocurrencies than traditional stocks! 
+                </p>
+
+                <div class="image-container">
+                    <a href="https://www.investopedia.com/terms/m/macd.asp" target="_blank" rel="noopener noreferrer">
+                        <img src="./images/macd.webp" alt="MACD"/>
+                    </a>
+                </div>
+                
+                <h5>So why cryptocurrency?</h5>
+
+                <p>
+                    So far I've mainly only mentioned the stock market. So why did I choose to build a trading bot for cryptocurrency? Well, there a couple of reasons. One reason is: since trading bots are computer programs, they have to rely on an algorithmic data based approach to trading which is why they primarily use technical indicators for their trading logic. As I mentioned earlier, technical indicators work great on cryptocurrencies. A second reason is: I wanted to challenge myself to build a trading bot for a new future-looking asset class. Another huge benefit of trading cryptocurrencies is the fact that they are digital and can be traded anytime 24/7 unlike traditional stocks which are traded on a fixed schedule (business days from 9:30 AM to 4:00 PM EST). However, because technical indicators work on any asset that has price and volume, my bot's trading logic could be modified to trade traditional stocks.
+                </p>
+
+                <div class="image-container">
+                    <img src="./images/crypto.jpg" alt="Cryptocurrency" onclick="openFullscreen(this)" class="clickable-image"/>
+                </div>
+
+                <h5>Freqtrade</h5>
+                <p>
+                    When I started researching trading bots, I discovered <a href="https://github.com/freqtrade/freqtrade" target="_blank">Freqtrade</a>. Freqtrade is a free and open-source Python based cryptocurrency trading bot framework.
+                </p>
+
+                <div class="image-container">
+                    <a href="https://github.com/freqtrade/freqtrade" target="_blank">
+                        <img src="./images/freqtrade.svg" alt="Freqtrade Logo" id="freqtrade_logo" />
+                    </a>
+                </div> 
+
                 <div class="text-container large-gap">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisi non nisi porta hendrerit. Ut sit amet nulla eu urna mattis eleifend. Curabitur mollis malesuada nunc sit amet suscipit. Nam mi felis, rhoncus at porttitor ac, gravida in tellus. Aenean finibus arcu eget enim consectetur, eu varius metus vestibulum. Morbi sodales bibendum sapien sit amet venenatis. Sed iaculis odio eget egestas mollis. Curabitur fringilla nec nulla sit amet egestas. In ipsum dolor, auctor ac porta vitae, fermentum sed orci. Aenean luctus hendrerit turpis. Aliquam cursus, leo sed luctus dapibus, neque erat vulputate tortor, tincidunt tempor massa augue id leo. Aliquam suscipit ligula ut sapien porttitor fermentum. Aliquam erat volutpat.
-                    </p>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisi non nisi porta hendrerit. Ut sit amet nulla eu urna mattis eleifend. Curabitur mollis malesuada nunc sit amet suscipit. Nam mi felis, rhoncus at porttitor ac, gravida in tellus. Aenean finibus arcu eget enim consectetur, eu varius metus vestibulum. Morbi sodales bibendum sapien sit amet venenatis. Sed iaculis odio eget egestas mollis. Curabitur fringilla nec nulla sit amet egestas. In ipsum dolor, auctor ac porta vitae, fermentum sed orci. Aenean luctus hendrerit turpis. Aliquam cursus, leo sed luctus dapibus, neque erat vulputate tortor, tincidunt tempor massa augue id leo. Aliquam suscipit ligula ut sapien porttitor fermentum. Aliquam erat volutpat.
                     </p>
                 </div>
 
+
                 <div class="image-container">
-                    <img src="./images/bitcoin.png" alt="Bitcoin Logo" />
-                    <a href="https://github.com/freqtrade/freqtrade" target="_blank">
-                        <img src="./images/freqtrade.svg" alt="Freqtrade Logo" id="freqtrade_logo" />
-                    </a>
+                    <img src="./images/bitcoin.webp" alt="Bitcoin Logo" onclick="openFullscreen(this)" class="clickable-image"/>
                 </div>
 
                 <div class="image-container">
