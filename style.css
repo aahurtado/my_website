@@ -259,6 +259,10 @@ p {
     line-height: 1.7rem;
 }
 
+p a {
+    color: white;
+}
+
 
 .italic {
     font-style: italic;
