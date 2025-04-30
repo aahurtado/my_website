@@ -80,7 +80,7 @@
                    Hello! My name is Aaron Hurtado. Scroll down to read and learn more about me! 
                 </p>
                 <p>
-                   I am a Software Engineer with over 5 years of experience in building and optimizing large-scale systems, including a healthcare analytics engine serving 10 million daily users and a Classified U.S. Navy combat defense system. I am an expert in multiple programming languages, including C++, Python, Java, and cloud technologies like AWS, with a track record of automating processes and enhancing system performance. I am passionate about tackling complex challenges, demonstrated through personal projects such as my cryptocurrency trading bot (which you can read more about towards the bottom of this page). I am eager to apply my technical expertise and problem-solving skills to deliver impactful solutions to meaningful future projects.
+                   I am a Software Engineer with over 5 years of experience in building and optimizing large-scale systems, including a healthcare analytics engine serving 10 million daily users and a Classified U.S. Navy combat defense system. I am an expert in multiple programming languages, including C++, Python, Java, and cloud technologies like AWS, with a track record of automating processes and enhancing system performance. I am passionate about tackling complex challenges, demonstrated through personal projects such as my cryptocurrency trading bot (which you can read more about in the Projects section of this website). I am eager to apply my technical expertise and problem-solving skills to deliver impactful solutions to meaningful future projects.
                 </p>
 
                 <div class="section-divider"></div>
@@ -169,10 +169,10 @@
                         learned to program and the marvelous art of Software Engineering. 
                     </p>
                     <p>
-                        During my time at UCSD, I learned everything from object-oriented programming and software design patterns to data structures and algorithms. I did the majority of my class work in Java, C++, and Python which are my main languages. During my time as a student I also worked as a tutor for the UCSD CSE department for many quarters. I tutored both lower and upper division data structure courses.
+                        During my time at UCSD, I learned everything from object-oriented programming and software design patterns to data structures and algorithms. I did the majority of my class work in Java, C++, and Python which are my main languages. During my time as a student I also worked as a tutor for the UCSD CSE department for several quarters. I tutored both lower and upper division data structure courses.
                     </p>
                     <p>
-                        A huge part of my time at UCSD was applying and being accepted into the Early Research Scholars Program (ERSP) by the CSE department. I applied to the program the first year it was created and was one of 23 undergraduate students accepted into the program. The main purpose of the program was to expose and get undergraduate students involved in Computer Science Research which is typically done by graduate students and professors. As a result of the ERSP program, I spent three years working alongside graduate students and professors on their research projects in the <a href="https://www.sysnet.ucsd.edu/sysnet/" target="_blank">Systems and Networking Research Group</a>. You can read more about the program <a href="https://ersp.ucsd.edu/" target="_blank">here</a>.
+                        A huge part of my time at UCSD was being accepted into the Early Research Scholars Program (ERSP) by the CSE department. I applied to the program the first year it was created and was one of 23 undergraduate students accepted into the program. The main purpose of the program was to expose and get undergraduate students involved in Computer Science Research which is typically done by graduate students and professors. As a result of the ERSP program, I spent three years working alongside graduate students and professors on their research projects in the <a href="https://www.sysnet.ucsd.edu/sysnet/" target="_blank">Systems and Networking Research Group</a>. You can read more about the program <a href="https://ersp.ucsd.edu/" target="_blank">here</a>.
                     </p>
                 </div>
 
@@ -378,7 +378,7 @@
                     </a>
                 </div>
                 
-                <h5>So why cryptocurrency?</h5>
+                <h5>Why cryptocurrency?</h5>
 
                 <p>
                     So far I've mainly only mentioned the stock market. So why did I choose to build a trading bot for cryptocurrency? Well, there are a couple of reasons. One main reason is, since trading bots are computer programs, they have to rely on an algorithmic data based approach to trading which is why they primarily use technical indicators for their trading logic. As I mentioned earlier, technical indicators work great on cryptocurrencies. A second reason is, I wanted to challenge myself to build a trading bot for a new future-looking asset class. A huge benefit of trading cryptocurrencies is the fact that they are digital and can be traded anytime 24/7 unlike traditional stocks which are traded on a fixed schedule (business days from 9:30 AM to 4:00 PM EST). However, because technical indicators work on any asset that has price and volume, my bot's trading logic could be modified to trade traditional stocks.
@@ -390,7 +390,7 @@
 
                 <h5>Freqtrade</h5>
                 <p>
-                    When I started researching trading bots, I discovered <a href="https://github.com/freqtrade/freqtrade" target="_blank">Freqtrade</a>. Freqtrade is a free and open-source Python based cryptocurrency trading bot framework.
+                    When I started researching trading bots, I quickly discovered <a href="https://github.com/freqtrade/freqtrade" target="_blank">Freqtrade</a>. Freqtrade is a free and open-source Python based cryptocurrency trading bot framework. Freqtrade works on the main cryptocurrency exchanges like Binance, Kraken, and Coinbase. It allows you to download historical price and volume data for any cryptocurrency pair supported by the exchange. With this data, you can backtest your trading strategy and optimize your trading parameters. Backtesting is where Freqtrade runs a simulation of your trading strategy on historical data and presents you with the results of your strategy. Then once you're satisfied with your strategy, you can use Freqtrade to trade the cryptocurrency live in real time.
                 </p>
 
                 <div class="image-container">
@@ -399,9 +399,71 @@
                     </a>
                 </div> 
 
+                <p>
+                    After reading the Freqtrade documentation, I started working on developing and implementing my own trading strategy. I studied and learned several technical indicators and tested how I could use them to create a profitable strategy. Thanks to backtesting, I could test my strategy on historical data and optimize my strategy. I became obsessed with finding the optimal strategy and spent countless hours continuously learning, testing, and improving my strategy. It was extremely fun and rewarding finding ways to make my strategy more and more profitable!
+                </p>
+
+                <p>
+                    Eventually, I was able to find a strategy that I was satisfied with. Let's take a look at the results!
+                </p>
+
+                <div class="image-container">
+                    <figure>
+                        <img src="./images/freqtrade_results.PNG" alt="Freqtrade Results" onclick="openFullscreen(this)" class="clickable-image" />
+                        <figcaption>My Freqtrade Results</figcaption>
+                    </figure>
+                </div>
+
+                <p>
+                    In case you're wondering what all of these terms mean, here are some of their definitions so we have a better understanding of the results.
+                </p>
+
+                <h5>Definitions:</h5>
+                <ul>
+                    <li>
+                        <h4>CAGR:</h4>
+                        The Compound Annual Growth Rate (CAGR) is a financial metric that measures the annual growth rate of an investment or portfolio over a specified period, assuming the returns are reinvested (compounded) each year. It provides a smoothed, annualized return that reflects the growth as if it occurred at a steady rate, making it useful for comparing the performance of different investments or strategies. It’s ideal for summarizing long-term performance. The S&P 500 has a historical CAGR of ~10% per year.
+                    </li>
+                    <li>
+                        <h4>Sortino:</h4>
+                        The Sortino ratio is a financial metric used to evaluate the risk-adjusted return of an investment or trading strategy, similar to the Sharpe ratio, but with a key difference: it focuses only on downside risk (negative returns or losses) rather than total volatility. This makes it particularly relevant for highlighting how well a strategy manages unfavorable outcomes, which is critical in volatile markets like cryptocurrencies. A higher Sortino ratio indicates better risk-adjusted returns relative to downside risk.
+                    </li>
+                    <li>
+                        <h4>Sharpe:</h4>
+                        The Sharpe ratio is a financial metric used to measure the risk-adjusted return of an investment or trading strategy. It shows how much return an investment generates per unit of risk taken, helping compare strategies or portfolios by accounting for volatility.
+                    </li>
+                    <li>
+                        <h4>Calmar:</h4>
+                        The Calmar ratio is a financial metric used to evaluate the risk-adjusted return of an investment or trading strategy by comparing its annualized return to its maximum drawdown (the largest peak-to-trough decline in portfolio value). It highlights how well a strategy delivers returns relative to the worst-case loss. A higher Calmar ratio indicates better returns per unit of maximum loss.
+                    </li>
+                    <li>
+                        <h4>SQN:</h4>
+                        The SQN (System Quality Number) is a performance metric developed by Dr. Van K. Tharp to evaluate the quality of a trading system or strategy by measuring the consistency and profitability of its returns relative to the variability of those returns. SQN evaluates how predictable and reliable a trading system’s returns are. A high SQN indicates consistent profits with low variability. Negative SQN values suggest a losing strategy.
+                    </li>
+                    <li>
+                        <h4>Profit Factor:</h4>
+                        The Profit Factor is a performance metric that measures the efficiency of a trading strategy by comparing the total gross profits from winning trades to the total gross losses from losing trades. It indicates how many times the profits cover the losses, providing a clear view of the strategy’s ability to generate gains relative to its risks.
+                    </li>
+                    <li>
+                        <h4>Expectancy (ratio):</h4>
+                        The Expectancy Ratio is a metric that measures the average expected profit per trade relative to the risk taken in each trade, expressed as a multiple of the risk (often denoted as "R"). It’s derived from the Expectancy, which quantifies the average dollar amount you expect to gain (or lose) per trade based on your strategy’s win rate, average win, and average loss. The Expectancy Ratio provides a normalized view of profitability per unit of risk, making it useful for evaluating the efficiency of a trading strategy. A high ratio indicates effective risk management, as losses are minimized while gains are maximized.
+                    </li>
+                </ul>
+
+                <h5>Backtesting Period:</h5>
+                <p>
+                    At the time of this writing, I backtested my strategy on BTC (Bitcoin) from the dates of January 1st, 2021 to March 25th, 2025. Why did I start the backtesting since January 2021 when Bitcoin has been around since 2009? The exchange I'm using only provides historical data for Bitcoin starting from 2019-09-23. Furthermore, the technical indicators I use require a certain amount of data to start producing their signals. Thus, I chose January 2021 as the start date of my backtesting period.
+                </p>
+
+                <h5>Results Overview:</h5>
+                <p>
+                    I set the bot to start with a trading balance of $10,000 USDT which is a cryptocurrency stablecoin pegged to the US Dollar (the exchange I'm using doesn't support normal USD). Looking at the results you can see my trading strategy ended with a balance of $74,781 USDT over a period of about 3 years resulting in a total profit of $64,781 USDT. That's a 647% return on investment!
+                </p>
+
+
                 <div class="text-container large-gap">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisi non nisi porta hendrerit. Ut sit amet nulla eu urna mattis eleifend. Curabitur mollis malesuada nunc sit amet suscipit. Nam mi felis, rhoncus at porttitor ac, gravida in tellus. Aenean finibus arcu eget enim consectetur, eu varius metus vestibulum. Morbi sodales bibendum sapien sit amet venenatis. Sed iaculis odio eget egestas mollis. Curabitur fringilla nec nulla sit amet egestas. In ipsum dolor, auctor ac porta vitae, fermentum sed orci. Aenean luctus hendrerit turpis. Aliquam cursus, leo sed luctus dapibus, neque erat vulputate tortor, tincidunt tempor massa augue id leo. Aliquam suscipit ligula ut sapien porttitor fermentum. Aliquam erat volutpat.
+                        My strategy had a CAGR of 60.90% which significantly outperforms the S&P 500's historical CAGR of ~10% per year. Another highlight is the 2.06 Sortino ratio and 6.92 Calmar ratio which shows that my strategy is able to generate high returns with robust downside risk management. Another highlight is the 2.06 Sortino ratio and 6.92 Calmar ratio which shows that my strategy is able to generate high returns with robust downside risk management. Additionally, the profit factor of 38.21 and an expectancy ratio of 7.44, demonstrate both profitable and efficient risk-adjusted returns.
                     </p>
                 </div>
 
@@ -410,12 +472,6 @@
                     <img src="./images/bitcoin.webp" alt="Bitcoin Logo" onclick="openFullscreen(this)" class="clickable-image"/>
                 </div>
 
-                <div class="image-container">
-                    <figure>
-                        <img src="./images/freqtrade_results.PNG" alt="Freqtrade Results" onclick="openFullscreen(this)" class="clickable-image" />
-                        <figcaption>My Freqtrade Results</figcaption>
-                    </figure>
-                </div>
 
 
                 <div class="section-divider"></div>
@@ -427,22 +483,33 @@
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisi non nisi porta hendrerit. Ut sit amet nulla eu urna mattis eleifend. Curabitur mollis malesuada nunc sit amet suscipit. Nam mi felis, rhoncus at porttitor ac, gravida in tellus. Aenean finibus arcu eget enim consectetur, eu varius metus vestibulum. Morbi sodales bibendum sapien sit amet venenatis. Sed iaculis odio eget egestas mollis. Curabitur fringilla nec nulla sit amet egestas. In ipsum dolor, auctor ac porta vitae, fermentum sed orci. Aenean luctus hendrerit turpis. Aliquam cursus, leo sed luctus dapibus, neque erat vulputate tortor, tincidunt tempor massa augue id leo. Aliquam suscipit ligula ut sapien porttitor fermentum. Aliquam erat volutpat.
                     </p>
+
+                    <div class="image-container">
+                        <figure>
+                            <img src="./images/ps5_scalpers.webp" alt="PS5 listings on eBay" />
+                            <figcaption>PS5 listings on eBay by scalpers</figcaption>
+                        </figure>
+                    </div>
+
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisi non nisi porta hendrerit. Ut sit amet nulla eu urna mattis eleifend. Curabitur mollis malesuada nunc sit amet suscipit. Nam mi felis, rhoncus at porttitor ac, gravida in tellus. Aenean finibus arcu eget enim consectetur, eu varius metus vestibulum. Morbi sodales bibendum sapien sit amet venenatis. Sed iaculis odio eget egestas mollis. Curabitur fringilla nec nulla sit amet egestas. In ipsum dolor, auctor ac porta vitae, fermentum sed orci. Aenean luctus hendrerit turpis. Aliquam cursus, leo sed luctus dapibus, neque erat vulputate tortor, tincidunt tempor massa augue id leo. Aliquam suscipit ligula ut sapien porttitor fermentum. Aliquam erat volutpat.
                     </p>
+
+                    <div class="image-container">
+                        <a href="https://github.com/Strip3s/PhoenixBot" target="_blank">
+                            <img src="./images/phoenix_bot.png" alt="Phoenix Bot" />
+                        </a>
+                    </div>
                 </div>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisi non nisi porta hendrerit. Ut sit amet nulla eu urna mattis eleifend. Curabitur mollis malesuada nunc sit amet suscipit. Nam mi felis, rhoncus at porttitor ac, gravida in tellus. Aenean finibus arcu eget enim consectetur, eu varius metus vestibulum. Morbi sodales bibendum sapien sit amet venenatis. Sed iaculis odio eget egestas mollis. Curabitur fringilla nec nulla sit amet egestas. In ipsum dolor, auctor ac porta vitae, fermentum sed orci. Aenean luctus hendrerit turpis. Aliquam cursus, leo sed luctus dapibus, neque erat vulputate tortor, tincidunt tempor massa augue id leo. Aliquam suscipit ligula ut sapien porttitor fermentum. Aliquam erat volutpat.
+                </p>
 
                 <div class="tilt-card-container">
                     <div class="tilt-card image-container">
                         <img src="./images/ps5.png" alt="Playstation 5" />
                     </div>
-                </div>
-
-                <div class="image-container">
-                    <a href="https://github.com/Strip3s/PhoenixBot" target="_blank">
-                        <img src="./images/phoenix_bot.png" alt="Phoenix Bot" />
-                    </a>
-                    <img src="./images/gamestop.jpg" alt="GameStop" />
                 </div>
 
 
