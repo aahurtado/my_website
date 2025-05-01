@@ -445,19 +445,19 @@
 
                 
                 <p>
-                    The <code>populate_indicators</code> function adds columns to the dataframe that represent the technical analysis indicator values. Technical analysis functions analyse the candle data using the technical indicator of your choice and then we can store the result in a new column in the dataframe. In line 18 we use ta-lib's RSI function <code>ta.RSI()</code>, and assign the result to a column named <code>rsi</code>. This creates a new column in the dataframe, which has the value 1 assigned whenever RSI is above 30.
+                    The <code>populate_indicators</code> function adds columns to the dataframe that represent the technical analysis indicator values. Technical analysis functions analyse the candle data using the technical indicator of your choice and then we can store the result in a new column in the dataframe. In line 18 we use ta-lib's RSI function <code>ta.RSI()</code>, and assign the result to a column named <code>rsi</code>.
                 </p>
 
                 <p>
-                    <a href="https://www.investopedia.com/terms/r/rsi.asp" target="_blank" rel="noopener noreferrer">RSI</a> is a very popular technical indicator that measures the speed and magnitude  of price movements to detect overbought or oversold conditions. RSI values range from 0 to 100. A value above 70 is considered overbought while a value below 30 is considered oversold.
+                    <a href="https://www.investopedia.com/terms/r/rsi.asp" target="_blank" rel="noopener noreferrer">RSI</a> is a very popular technical indicator that measures the speed and magnitude of price movements to detect overbought or oversold conditions. RSI values range from 0 to 100. A value above 70 is considered overbought while a value below 30 is considered oversold.
                 </p>
 
                 <p>
-                    The purpose of the <code>populate_entry_trend</code> function is to define conditions for an entry signal. We accomplish this by assigning a value of 1 to the dataframe column <code>enter_long</code> when the conditions we are looking for are met. The term <em>long</em> means to buy a cryptocurrency and aim to sell it at a higher price for a profit. When freqtrade encounters an entry signal, it will attempt to make a buy order. In the example code above, we assign a long entry signal whenever the RSI value is below 30.
+                    The purpose of the <code>populate_entry_trend</code> function is to define conditions for an entry signal (i.e. when to buy). We accomplish this by assigning a value of 1 to the dataframe column <code>enter_long</code> when the conditions we are looking for are met. The term <em>long</em> means to buy a cryptocurrency and aim to sell it at a higher price for a profit. When freqtrade encounters an entry signal, it will attempt to make a buy order. In the example code above, we assign a long entry signal whenever the RSI value is below 30.
                 </p>
 
                 <p>
-                    Similarly, the <code>populate_exit_trend</code> function defines conditions for an exit signal (e.g. sell). In the sample startegy, we look to exit our trade whenever the RSI value is above 70 which typically indicates that the price of the cryptocurrency is overbought and it's time to sell.
+                    Similarly, the <code>populate_exit_trend</code> function defines conditions for an exit signal (i.e. when to sell). In the sample startegy, we look to exit our trade whenever the RSI value is above 70 which typically indicates that the price of the cryptocurrency is overbought and it's time to sell.
                 </p>
 
 
