@@ -1047,7 +1047,7 @@ div.footer-bottom p {
     /* Inline code */
     :not(pre) > code {
         /* padding: .1rem; */
-        font-size: 1.0rem;
+        font-size: 0.9rem;
     }
 
 
