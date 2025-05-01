@@ -403,8 +403,67 @@
                     After reading the Freqtrade documentation, I started working on developing and implementing my own trading strategy. I studied and learned several technical indicators and tested how I could use them to create a profitable strategy. Thanks to backtesting, I could test my strategy on historical data and optimize my strategy. I became obsessed with finding the optimal strategy and spent countless hours continuously learning, testing, and improving my strategy. It was extremely fun and rewarding finding ways to make my strategy more and more profitable!
                 </p>
 
+                <div class="image-container">
+                    <figure>
+                        <img src="./images/code_freqtrade_strategy.png" alt="Example Freqtrade Strategy" onclick="openFullscreen(this)" class="clickable-image"/>
+                        <figcaption>A Minimal Freqtrade Strategy</figcaption>
+                    </figure>
+                </div> 
+
+                <h5>Example Freqtrade Strategy</h5>
                 <p>
-                    Eventually, I was able to find a strategy that I was satisfied with. Let's take a look at the results!
+                    Let's take a look at what a simple Freqtrade strategy looks like. In the image above, you can see the code for a minimal strategy. For background information, Freqtrade uses <a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer">pandas</a> to store and provide the candlestick data. Pandas is a great library developed for processing large amounts of data in tabular format. Each row in a dataframe corresponds to one candle on a chart and is made up of a six values: date, open, high, low, close and volume. The latest complete candle is always the last in the dataframe.
+                </p>
+
+                <p>
+                    If we were to look at the first few rows of the main dataframe using the pandas <code>head()</code> function, we would see:
+                </p>
+
+                <pre>
+                    <code>
+    > dataframe.head()
+                           date      open      high       low     close     volume
+    0 2021-11-09 23:25:00+00:00  67279.67  67321.84  67255.01  67300.97   44.62253
+    1 2021-11-09 23:30:00+00:00  67300.97  67301.34  67183.03  67187.01   61.38076
+    2 2021-11-09 23:35:00+00:00  67187.02  67187.02  67031.93  67123.81  113.42728
+    3 2021-11-09 23:40:00+00:00  67123.80  67222.40  67080.33  67160.48   78.96008
+    4 2021-11-09 23:45:00+00:00  67160.48  67160.48  66901.26  66943.37  111.39292
+                    </code>
+                </pre>
+
+                <p>
+                    The timeframe variable determines what candle length the strategy will use (e.g. 15m, 1h, 4h, 1d etc.). Some people use short 15m or 1h timeframes while others use longer timeframes such as 8h or 1d.
+                </p>
+                
+                <p>
+                    On line 10 we set the stoploss for the strategy to be -10%. The stoploss parameter is a ratio that should trigger a sale. For example, the value -0.10 will cause an immediate sell if your profit dips below -10% for a given trade. 
+                </p>
+
+                <p>
+                    Setting the minimal_roi value to 0.01 means that the strategy will only sell a position if the profit is at least 1% above the initial entry price.
+                </p>
+
+                
+                <p>
+                    The <code>populate_indicators</code> function adds columns to the dataframe that represent the technical analysis indicator values. Technical analysis functions analyse the candle data using the technical indicator of your choice and then we can store the result in a new column in the dataframe. In line 18 we use ta-lib's RSI function <code>ta.RSI()</code>, and assign the result to a column named <code>rsi</code>. This creates a new column in the dataframe, which has the value 1 assigned whenever RSI is above 30.
+                </p>
+
+                <p>
+                    <a href="https://www.investopedia.com/terms/r/rsi.asp" target="_blank" rel="noopener noreferrer">RSI</a> is a very popular technical indicator that measures the speed and magnitude  of price movements to detect overbought or oversold conditions. RSI values range from 0 to 100. A value above 70 is considered overbought while a value below 30 is considered oversold.
+                </p>
+
+                <p>
+                    The purpose of the <code>populate_entry_trend</code> function is to define conditions for an entry signal. We accomplish this by assigning a value of 1 to the dataframe column <code>enter_long</code> when the conditions we are looking for are met. The term <em>long</em> means to buy a cryptocurrency and aim to sell it at a higher price for a profit. When freqtrade encounters an entry signal, it will attempt to make a buy order. In the example code above, we assign a long entry signal whenever the RSI value is below 30.
+                </p>
+
+                <p>
+                    Similarly, the <code>populate_exit_trend</code> function defines conditions for an exit signal (e.g. sell). In the sample startegy, we look to exit our trade whenever the RSI value is above 70 which typically indicates that the price of the cryptocurrency is overbought and it's time to sell.
+                </p>
+
+
+                <h5>My Freqtrade Strategy</h5>
+                <p>
+                    Eventually, I was able to create a strategy that I was satisfied with. Let's take a look at the results!
                 </p>
 
                 <div class="image-container">

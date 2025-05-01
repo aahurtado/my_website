@@ -304,6 +304,40 @@ blockquote {
 
 
 
+code,
+pre {
+	background: rgb(22, 25, 29);
+	color: white;
+
+	font-family: Consolas, Monaco, monospace;
+	font-size: 1rem;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5rem;
+
+	tab-size: 4;
+
+	hyphens: none;
+
+	overflow: auto;
+
+    max-width: var(--text-max-width);
+    margin: var(--text-margin-bottom) auto;
+}
+
+
+/* Inline code */
+:not(pre) > code {
+    background-color: transparent;
+	padding: .1rem;
+	white-space: normal;
+	font-size: 1.1rem;
+}
+
+
 
 /* ***************************************************************************** */
 /* Top Navigation Bar */
@@ -999,6 +1033,23 @@ div.footer-bottom p {
         max-width: 75%;
         margin: 35% auto;
     }
+
+    code,
+    pre {
+        font-size: 1.0rem;
+        line-height: 1.4rem;
+
+        max-width: var(--text-max-width-mobile);
+        margin: var(--text-margin-bottom-mobile) auto;
+    }
+
+
+    /* Inline code */
+    :not(pre) > code {
+        /* padding: .1rem; */
+        font-size: 1.0rem;
+    }
+
 
 
     footer { 
