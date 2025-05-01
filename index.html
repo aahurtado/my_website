@@ -80,7 +80,7 @@
                    Hello! My name is Aaron Hurtado. Scroll down to read and learn more about me! 
                 </p>
                 <p>
-                   I am a Software Engineer with over 5 years of experience in building and optimizing large-scale systems, including a healthcare analytics engine serving 10 million daily users and a Classified U.S. Navy combat defense system. I am an expert in multiple programming languages, including C++, Python, Java, and cloud technologies like AWS, with a track record of automating processes and enhancing system performance. I am passionate about tackling complex challenges, demonstrated through personal projects such as my cryptocurrency trading bot (which you can read more about in the Projects section of this website). I am eager to apply my technical expertise and problem-solving skills to deliver impactful solutions to meaningful future projects.
+                   I am a Software Engineer with over 5 years of experience in building and optimizing large-scale systems, including a healthcare analytics engine serving 10 million daily users and a U.S. Navy combat defense system. I am an expert in multiple programming languages, including C++, Python, Java, and cloud technologies like AWS, with a track record of automating processes and enhancing system performance. I am passionate about tackling complex challenges, demonstrated through personal projects such as my cryptocurrency trading bot (which you can read more about in the Projects section of this website). I am eager to apply my technical expertise and problem-solving skills to deliver impactful solutions to meaningful future projects.
                 </p>
 
                 <div class="section-divider"></div>
@@ -221,16 +221,16 @@
 
                 <h5>Key Technologies Used:</h5>
                 <ul>
-                    <li> C++ </li>
-                    <li> MongoDB </li>
-                    <li> AWS </li>
-                    <li> Docker </li>
-                    <li> Linux </li>
-                    <li> Jenkins </li>
-                    <li> GitLab </li>
-                    <li> Python </li>
-                    <li> Ninja </li>
-                    <li> Clang </li>
+                    <li>C++ </li>
+                    <li>MongoDB </li>
+                    <li>AWS </li>
+                    <li>Docker </li>
+                    <li>Linux </li>
+                    <li>Jenkins </li>
+                    <li>GitLab </li>
+                    <li>Python </li>
+                    <li>Ninja </li>
+                    <li>Clang </li>
                 </ul>
 
                 <h5>What are <a href="https://www.ncqa.org/hedis/" target="_blank" rel="noopener noreferrer">HEDIS</a> measures?</h5>
@@ -246,6 +246,18 @@
                     Health care plans seek accreditation and measure performance through the administration and submission of HEDIS data. Health care plans must undergo a HEDIS Compliance Audit, which may only be performed by licensed organizations and certified auditors. NCQA publishes the results of the measures on their website. HEDIS was designed to allow consumers to compare health care plan performance and for national and regional benchmarks.
                 </p>
 
+                <h5>Example HEDIS Measures</h5>
+                <ul>
+                    <li>Lead Screening in Children (LSC): The percentage of children 2 years of age who had one or more capillary or venous lead blood test for lead poisoning by their second birthday.</li>
+                    <li>Breast Cancer Screening (BCS): assesses women 50–74 years of age who had at least one mammogram to screen for breast cancer in the past two years.</li>
+                    <li>Annual Dental Visit (ADV): Assesses Medicaid members 2–20 years of age with dental benefits, who had at least one dental visit during the year.</li>
+                </ul>
+
+                <h5>Backend Engine Overview</h5>
+                <p>
+                    To calculate the scores for HEDIS measures, we used our backend engine which was built in C++. You would give the engine a list of measures and a set of members from a certain population data set. Then, for each member, the engine would iterate over all of their health-care data from our database (e.g. medical charts, insurance claims, medical office visits, and procedures). Next it would run all of their data through the list of specified measures and depending on the measure give them a pass/fail score. Some measures would output a numerical score based on certain criteria and calculations. Lastly, we would output all of the results in a JSON output which was then consumed and analyzed by our API team.
+                </p>
+
                 <h5>What I did:</h5>
                 <p>
                     On an annual basis NCQA adds, deletes, and revises the HEDIS measures. As a member of the backend healthcare analytics engine team, I was responsible for updating the codebase (C++) to implement new and revised measures. Afterwards, our Quality Assurance (QA) team would review the changes and ensure that the measures were implemented correctly. If any bugs or issues were found, I would work with the QA team to fix them.
@@ -255,11 +267,23 @@
                     In addition to HEDIS measures, I also worked on <a href="https://www.cms.gov/medicare/quality/measures" target="_blank" rel="noopener noreferrer">CMS</a> measures. CMS measures are used to assure and evaluate quality health care for Medicare and Medicaid Beneficiaries. Furthermore, some states would have their own custom measures that we would need to implement and maintain.
                 </p>
 
+                <p>
+                    An example of a project I worked on was to refactor our core engine's output. I worked with one of the VPs who wanted more insight into how our scores for measures were being calculated. Specifically, he wanted to know exactly which health-care codes were being used to evaluate our scores. Thus I had to refactor our engine's code to store and output a list of all health-care codes that were used to compute the scores for each member.
+                </p>
+
+                <p>
+                    Another project I worked on was to create a tool that would convert all of our health-care data for members from a plain text format to a <a href="https://en.wikipedia.org/wiki/YAML" target="_blank" rel="noopener noreferrer">YAML</a> format. My manager was a big fan of YAML and he wanted to update the codebase to use it. Thus, I developed a C++ program that would read in our plain text data, convert it to YAML, and output it in the new format. Once I finished the program, I successfully ran it and converted all of our data into YAML.
+                </p>
+
+                <p>
+                    Our team used <a href="https://www.atlassian.com/software/confluence" target="_blank" rel="noopener noreferrer">Confluence</a> to create and maintain our technical documentation. In my downtime, I wrote and contributed a copious amount of documentation to our Confluence pages. This documentation helped our team and future engineers understand the codebase and the logic behind the code.
+                </p>
+
                 
                 <div class="text-container large-gap">
                     <p>
-                       During my time at Centene, I became owner of a significant portion of our codebase that was left abandoned when a previous engineer left the company. This was a great opportunity for me to learn more about the codebase and to become a more senior engineer. Specifically, it was our entire section of Risk Adjusted measures that was left destitute. NCQA uses risk-adjusted measures in HEDIS to assess health plan performance by accounting for differences in patient populations. These measures compare a plan's actual performance to an expected performance, factoring in variables like age, gender, and comorbidities. This allows for a more fair comparison between plans, as it adjusts for the inherent risks associated with different patient profiles. I was able to refactor these measures and bring them up to date with the latest standards of our codebase, restoring the lost functionality of these measures.
-                    </p>
+                        During my time at Centene, I became owner of a significant portion of our codebase that was left abandoned when a previous engineer left the company. This was a great opportunity for me to learn more about the codebase and to become a more senior engineer. Specifically, it was our entire section of Risk Adjusted measures that was left destitute. NCQA uses risk-adjusted measures in HEDIS to assess health plan performance by accounting for differences in patient populations. These measures compare a plan's actual performance to an expected performance, factoring in variables like age, gender, and comorbidities. This allows for a more fair comparison between plans, as it adjusts for the inherent risks associated with different patient profiles. I was able to refactor these measures and bring them up to date with the latest standards of our codebase, restoring the lost functionality of these measures.
+                     </p> 
                 </div>
 
 
@@ -445,7 +469,7 @@
 
                 
                 <p>
-                    The <code>populate_indicators</code> function adds columns to the dataframe that represent the technical analysis indicator values. Technical analysis functions analyse the candle data using the technical indicator of your choice and then we can store the result in a new column in the dataframe. In line 18 we use ta-lib's RSI function <code>ta.RSI()</code>, and assign the result to a column named <code>rsi</code>.
+                    The <code>populate_indicators</code> function adds columns to the dataframe that represent the technical analysis indicator values. Technical analysis functions analyze the candle data using the technical indicator of your choice and then we can store the result in a new column in the dataframe. In line 18 we use ta-lib's RSI function <code>ta.RSI()</code>, and assign the result to a column named <code>rsi</code>.
                 </p>
 
                 <p>
@@ -457,7 +481,7 @@
                 </p>
 
                 <p>
-                    Similarly, the <code>populate_exit_trend</code> function defines conditions for an exit signal (i.e. when to sell). In the sample startegy, we look to exit our trade whenever the RSI value is above 70 which typically indicates that the price of the cryptocurrency is overbought and it's time to sell.
+                    Similarly, the <code>populate_exit_trend</code> function defines conditions for an exit signal (i.e. when to sell). In the sample strategy, we look to exit our trade whenever the RSI value is above 70 which typically indicates that the price of the cryptocurrency is overbought and it's time to sell.
                 </p>
 
 
@@ -641,7 +665,7 @@
                 </p>
 
                 <p>
-                    For instance, an easy way to detect a bot is to check how fast the user is navigating and interacting with the website. If the user is navigating the website too fast, it is likely a bot. To combat this, we added a random delay between actions the bot takes to make it seem more human-like.
+                    For instance, an easy way to detect a bot is to check how fast the user is navigating and interacting with the website. If the user is navigating the website too fast, it is likely a bot. To combat this, we added a random delay between the actions the bot takes to make it seem more human-like.
                 </p>
 
                 <p>
@@ -649,7 +673,7 @@
                 </p>
 
                 <p>
-                    One night we had news Target was going to release stock sometime between 2:00am - 4:00am in the morning. Before I went to bed, I turned on the bot and set it to run on Target's website. In the morning when I woke up, I immediately got out of bed and rushed to my computer to see what had happened overnight. That was when I saw it, the final purchase confirmation screen of my very own PS5! The bot was a success!! All of our hard work and dedication finally paid off and I was able to enjoy the victory of my own hard work! It was a glorious moment and a moment I will always remember.
+                    One night we had news Target was going to release stock sometime between 2:00am - 4:00am in the morning. Before I went to bed, I turned on the bot and set it to run on Target's website. In the morning when I woke up, I immediately jumped out of bed and rushed to my computer to see what had happened overnight. That was when I saw it, the final purchase confirmation screen of my very own PS5! The bot was a success!! All of our hard work and dedication finally paid off and I was able to enjoy the victory of my own hard work! It was a glorious moment and a moment I will always remember.
                 </p>
 
                 <p>
