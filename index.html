@@ -255,7 +255,7 @@
 
                 <h5>Backend Engine Overview</h5>
                 <p>
-                    To calculate the scores for HEDIS measures, we used our backend engine which was built in C++. You would give the engine a list of measures and a set of members from a certain population data set. Then, for each member, the engine would iterate over all of their health-care data from our database (e.g. medical charts, insurance claims, medical office visits, and procedures). Next it would run all of their data through the list of specified measures and depending on the measure give them a pass/fail score. Some measures would output a numerical score based on certain criteria and calculations. Lastly, we would output all of the results in a JSON output which was then consumed and analyzed by our API team.
+                    To calculate the scores for HEDIS measures, we used our backend engine which was built in C++. You would give the engine a list of measures and a set of members from a certain population data set. Then, for each member, the engine would iterate over all of their health-care data from our database (e.g. medical charts, insurance claims, medical office visits, and procedures). Next, it would run all of their data through the list of specified measures and depending on the measure give them a pass/fail score. Some measures would output a numerical score based on certain criteria and calculations. Lastly, we would output all of the results in a JSON output which was then consumed and analyzed by our API team.
                 </p>
 
                 <h5>What I did:</h5>
@@ -482,6 +482,15 @@
 
                 <p>
                     Similarly, the <code>populate_exit_trend</code> function defines conditions for an exit signal (i.e. when to sell). In the sample strategy, we look to exit our trade whenever the RSI value is above 70 which typically indicates that the price of the cryptocurrency is overbought and it's time to sell.
+                </p>
+
+                <h5>Machine Learning Optimization</h5>
+                <p>
+                    Freqtrade has a feature that allows you to optimize your strategy using machine learning, a process called Hyperparameter Optimization. First, you need to define a search space for the parameters you want to optimize. You can choose to optimize your buy, sell, stoploss, or other parameters. Second, you need to specify a range of values for each parameter. For example, if you want to test if your strategy performs better with a stoploss of 10% or 20%, you would specify a range of 10%-20% for the stoploss parameter. Once you have all of your parameters and their ranges defined, you can run the optimization process.
+                </p>
+
+                <p>
+                    The optimization process is a trial and error process where the bot will try different parameters and see which ones have the best performance. In general, the search for best parameters starts with a few random combinations and then uses Bayesian search with a ML regressor algorithm to quickly find a combination of parameters that perform the best. Depending on the size of your search space, the optimization process can take a while to complete. Afterwards, the program will output the best parameters it found and the results of the optimized strategy.
                 </p>
 
 
