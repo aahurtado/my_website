@@ -748,6 +748,10 @@ div.image-container figure:only-child {
 }
 
 
+img.text-width {
+    width: var(--text-max-width);
+}
+
 
 
 
@@ -930,6 +934,11 @@ div.footer-bottom p {
         background-position: center;
         margin: 30% 0;
         height: 25vh;
+    }
+
+
+    img.text-width {
+        width: var(--text-max-width-mobile);
     }
 
 
