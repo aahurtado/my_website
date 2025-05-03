@@ -236,7 +236,7 @@
 
                 <h5>What are <a href="https://www.ncqa.org/hedis/" target="_blank" rel="noopener noreferrer">HEDIS</a> measures?</h5>
                 <p>
-                    HEDIS measures are a set of standardized metrics used to evaluate the quality of healthcare services. They are used by healthcare organizations to monitor and improve the quality of care they provide. It's a gold standard in healthcare performance measurement, used by over 90% of health plans in the US.
+                    HEDIS measures are a set of standardized metrics used to evaluate the quality of healthcare services. They are used by healthcare organizations to monitor and improve the quality of care they provide. It is a gold standard in healthcare performance measurement, used by over 90% of health plans in the US.
                 </p>
 
                 <p>
@@ -434,7 +434,7 @@
                 <h5>Why cryptocurrency?</h5>
 
                 <p>
-                    So far I've mainly only mentioned the stock market. So why did I choose to build a trading bot for cryptocurrency? Well, there are a couple of reasons. One main reason is, since trading bots are computer programs, they have to rely on an algorithmic data based approach to trading which is why they primarily use technical indicators for their trading logic. As I mentioned earlier, technical indicators work great on cryptocurrencies. A second reason is, I wanted to challenge myself to build a trading bot for a new future-looking asset class. A huge benefit of trading cryptocurrencies is the fact that they are digital and can be traded anytime 24/7 unlike traditional stocks which are traded on a fixed schedule (business days from 9:30 AM to 4:00 PM EST). However, because technical indicators work on any asset that has price and volume, my bot's trading logic could be modified to trade traditional stocks.
+                    So far I have mainly only mentioned the stock market. So why did I choose to build a trading bot for cryptocurrency? Well, there are a couple of reasons. One main reason is, since trading bots are computer programs, they have to rely on an algorithmic data based approach to trading which is why they primarily use technical indicators for their trading logic. As I mentioned earlier, technical indicators work great on cryptocurrencies. A second reason is, I wanted to challenge myself to build a trading bot for a new future-looking asset class. A huge benefit of trading cryptocurrencies is the fact that they are digital and can be traded anytime 24/7 unlike traditional stocks which are traded on a fixed schedule (business days from 9:30 AM to 4:00 PM EST). However, because technical indicators work on any asset that has price and volume, my bot's trading logic could be modified to trade traditional stocks.
                 </p>
 
                 <div class="image-container">
@@ -443,7 +443,7 @@
 
                 <h5>Freqtrade</h5>
                 <p>
-                    When I started researching trading bots, I quickly discovered <a href="https://github.com/freqtrade/freqtrade" target="_blank">Freqtrade</a>. Freqtrade is a free and open-source Python based cryptocurrency trading bot framework. Freqtrade works on the main cryptocurrency exchanges like Binance, Kraken, and Coinbase. It allows you to download historical price and volume data for any cryptocurrency pair supported by the exchange. With this data, you can backtest your trading strategy and optimize your trading parameters. Backtesting is where Freqtrade runs a simulation of your trading strategy on historical data and presents you with the results of your strategy. Then once you're satisfied with your strategy, you can use Freqtrade to trade the cryptocurrency live in real time.
+                    When I started researching trading bots, I quickly discovered <a href="https://github.com/freqtrade/freqtrade" target="_blank">Freqtrade</a>. Freqtrade is a free and open-source Python based cryptocurrency trading bot framework. Freqtrade works on the main cryptocurrency exchanges like Binance, Kraken, and Coinbase. It allows you to download historical price and volume data for any cryptocurrency pair supported by the exchange. With this data, you can backtest your trading strategy and optimize your trading parameters. Backtesting is where Freqtrade runs a simulation of your trading strategy on historical data and presents you with the results of your strategy. Then once you are satisfied with your strategy, you can use Freqtrade to trade the cryptocurrency live in real time.
                 </p>
 
                 <div class="image-container">
@@ -510,7 +510,7 @@
                 </p>
 
                 <p>
-                    Similarly, the <code>populate_exit_trend</code> function defines conditions for an exit signal (i.e. when to sell). In the sample strategy, we look to exit our trade whenever the RSI value is above 70 which typically indicates that the price of the cryptocurrency is overbought and it's time to sell.
+                    Similarly, the <code>populate_exit_trend</code> function defines conditions for an exit signal (i.e. when to sell). In the sample strategy, we look to exit our trade whenever the RSI value is above 70 which typically indicates that the price of the cryptocurrency is overbought and it is time to sell.
                 </p>
 
                 <h5>Machine Learning Optimization</h5>
@@ -525,7 +525,7 @@
 
                 <h5>My Freqtrade Strategy</h5>
                 <p>
-                    Eventually, I was able to create a strategy that I was satisfied with. Let's take a look at the results!
+                    Eventually, I was able to create a strategy that I was satisfied with. Let us take a look at the results!
                 </p>
 
                 <div class="image-container">
@@ -536,7 +536,7 @@
                 </div>
 
                 <p>
-                    In case you're wondering what all of these terms mean, here are some of their definitions so we have a better understanding of the results.
+                    In case you are wondering what all of these terms mean, here are some of their definitions so we have a better understanding of the results.
                 </p>
 
                 <h5>Definitions:</h5>
@@ -573,12 +573,12 @@
 
                 <h5>Backtesting Period:</h5>
                 <p>
-                    At the time of this writing, I backtested my strategy on BTC (Bitcoin) from the dates of January 1st, 2021 to March 25th, 2025. Why did I start the backtesting since January 2021 when Bitcoin has been around since 2009? The exchange I'm using only provides historical data for Bitcoin starting from 2019-09-23. Furthermore, the technical indicators I use require a certain amount of data to start producing their signals. Thus, I chose January 2021 as the start date of my backtesting period.
+                    At the time of this writing, I backtested my strategy on BTC (Bitcoin) from the dates of January 1st, 2021 to March 25th, 2025. Why did I start the backtesting since January 2021 when Bitcoin has been around since 2009? The exchange I am using only provides historical data for Bitcoin starting from 2019-09-23. Furthermore, the technical indicators I use require a certain amount of data to start producing their signals. Thus, I chose January 2021 as the start date of my backtesting period.
                 </p>
 
                 <h5>Results Overview:</h5>
                 <p>
-                    I set the bot to start with a trading balance of $10,000 USDT which is a cryptocurrency stablecoin pegged to the US Dollar (the exchange I'm using doesn't support normal USD). Looking at the results you can see my trading strategy ended with a balance of $74,781 over a period of about 4 years resulting in a total profit of $64,781. That's a 647% return on investment!
+                    I set the bot to start with a trading balance of $10,000 USDT which is a cryptocurrency stablecoin pegged to the US Dollar (the exchange I am using does not support normal USD). Looking at the results you can see my trading strategy ended with a balance of $74,781 over a period of about 4 years resulting in a total profit of $64,781. That is a 647% return on investment!
                 </p>
 
 
@@ -920,7 +920,7 @@
 
                 <h5>Bro:</h5>
                 <p>
-                    As mentioned previously, a typical network can contain a multitiude of devices all communicating with each other and to the Internet. In order to analyze the network traffic of a router, we needed a way to capture and analyze the vast amount of data packets being sent and received by the various devices on the network. This is where Bro comes in.
+                    As mentioned previously, a typical network can contain a multitude of devices all communicating with each other and to the Internet. In order to analyze the network traffic of a router, we needed a way to capture and analyze the vast amount of data packets being sent and received by the various devices on the network. This is where Bro comes in.
                 </p>
 
                 <p>
