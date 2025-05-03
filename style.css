@@ -113,6 +113,11 @@ section ul {
 }
 
 
+section ul a {
+    color: white;
+}
+
+
 section li {
     margin-bottom: 1%;
     font-weight: normal;
