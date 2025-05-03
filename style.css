@@ -267,6 +267,26 @@ h5 {
 }
 
 
+.link-icon {
+    opacity: 0;
+    visibility: hidden;
+    font-size: 2.0rem; 
+    transition: visibility 0.4s var(--transition-style) 0.3s; 
+}
+
+
+.header-link:hover {
+    cursor: pointer; 
+}
+
+
+.header-link:hover .link-icon {
+    cursor: pointer;
+    opacity: 0.3;
+    visibility: visible;
+}
+
+
 p {
     max-width: var(--text-max-width);
     margin-left: auto;
@@ -1005,6 +1025,11 @@ div.footer-bottom p {
         margin-bottom: 3%;
         font-size: 1.1rem;
         letter-spacing: 0.04rem;
+    }
+
+
+    .link-icon {
+        font-size: 1.6rem; 
     }
 
 

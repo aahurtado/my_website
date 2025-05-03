@@ -16,6 +16,19 @@ function openFullscreen(img) {
 
 
 
+function copyLinkToClipboard(event, id) {
+    event.preventDefault(); 
+    const url = `${window.location.origin}${window.location.pathname}#${id}`;
+    navigator.clipboard.writeText(url).then(() => {
+        alert('Link copied to clipboard!'); 
+    }).catch(err => {
+        console.error('Failed to copy link: ', err);
+    });
+}
+
+
+
+
 function updateActiveSection() {
     // Get all sections
     const sections = document.querySelectorAll('section');
