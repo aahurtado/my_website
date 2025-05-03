@@ -92,7 +92,7 @@
                         <ul>
                             <li>
                                 <h4>Programming Languages:</h4>
-                                Java, C, C++, Python, C#, JavaScript, Bash, YAML, OCaml, SPARC Assembly, Bro
+                                Java, C, C++, Python, C#, JavaScript, Bash, YAML, OCaml, SPARC Assembly, Bro (Zeek)
                             </li>
                             <li>
                                 <h4>Frontend:</h4>
@@ -810,8 +810,6 @@
 
                 <h2>Research Project: Search + Seizure</h2>
 
-                <!-- <a href="https://www.sysnet.ucsd.edu/projects/cloaking/" target="_blank" rel="noopener noreferrer">SSDS</a> -->
-                
                 <p>
                     During the summer after my first year at UCSD, I worked with a PhD student named <a href="https://www.linkedin.com/in/davidywang/" target="_blank" rel="noopener noreferrer">David Wang</a> and helped contribute to his research project. David was studying Black Hats (a term for malicious hackers) who were abusively manipulating search engine results to steer people towards fradulent websites that sold counterfeit luxury goods (e.g. Louis Vuitton, Gucci, Versace, etc.). During his research, he identified 52 distinct search engine optimization (SEO) campaigns that were selling fake products of sixteen different luxury brands.
                 </p>
@@ -873,17 +871,19 @@
                 </div> 
 
 
-                <!-- <div class="section-divider"></div>
+                <div class="section-divider"></div>
 
 
                 <h2>Research Project: Network Traffic Analysis</h2>
 
+                <h5>Overview:</h5>
                 <p>
-                    As mentioned in the Education section of this site, myself and three other undergraduate students worked with the Systems and Networking Research Group in the UCSD CSE department. The project we worked on was.
+                    As mentioned in the Education section of this site, myself and three other undergraduate students worked with the Systems and Networking Research Group in the UCSD CSE department. The goal of the project we worked on was to analyze a user’s behavior in order to gauge the probability of their machine becoming compromised. In addition to us undergraduate students, we also worked with a PhD student named <a href="https://www.linkedin.com/in/louis-dekoven-a000b853/" target="_blank" rel="noopener noreferrer">Louis DeKoven</a> who helped guide and mentor us with our research project.
+                </p>
 
-
-
-                    During the summer after my first year at UCSD, I worked with a PhD student named <a href="https://www.linkedin.com/in/louis-dekoven-a000b853/" target="_blank" rel="noopener noreferrer">Louis DeKoven</a> and helped contribute to his research project. 
+                <h5>Background Information:</h5>
+                <p>
+                    A compromised machine is one that has been infected with malware, viruses, or has been otherwise breached by an attacker. Over time the number of users on the Internet has grown drastically, especially with the rise of mobile smartphones and IoT (Internet of Things) devices. A result of this is that the number of compromised machines has also grown significantly as it has become easier for malware/viruses to spread themselves throughout the Internet's vast network of evergrowing devices.
                 </p>
 
                 <h5>Goals:</h5>
@@ -901,21 +901,106 @@
                         Predict the chance of a user's machine becoming compromised.
                     </li>
                 </ul>
-
+                
                 <h5>Key Technologies Used:</h5>
                 <ul>
-                    <li>Bro</li>
-                    <li>WireShark</li>
+                    <li><a href="https://zeek.org/" target="_blank" rel="noopener noreferrer">Bro (Zeek)</a></li>
+                    <li><a href="https://www.wireshark.org/" target="_blank" rel="noopener noreferrer">WireShark</a></li>
                     <li>Python</li>
                 </ul>
 
+                <h5>Network Traffic:</h5>
                 <p>
-                    During the summer 
+                    Routers are devices that direct data packets between networks, connecting devices (e.g., computers, phones) to each other and most commonly to the Internet. Essentially, routers allow devices to be able to communicate with each other and are a core component of what enables the Internet to function. It is how a computer in your home can connect and communicate with a computer in another country.
+                </p>
+
+                <p>
+                    By looking at a router's network traffic, we can see the data that is being sent and received by any devices on the network. This data can provide valuable insights into user behavior, such as which websites they visit, what applications they use, and how they interact with online services. By analyzing this data, we can identify patterns of behavior that may indicate risky or suspicious activity.
+                </p>
+
+                <h5>Bro:</h5>
+                <p>
+                    As mentioned previously, a typical network can contain a multitiude of devices all communicating with each other and to the Internet. In order to analyze the network traffic of a router, we needed a way to capture and analyze the vast amount of data packets being sent and received by the various devices on the network. This is where Bro comes in.
+                </p>
+
+                <p>
+                    Bro is a network security monitoring platform and a domain specific programming language. Bro was renamed to Zeek in 2018. Below is a quote from the Zeek website that provides a brief overview of what Zeek is and its purpose.
+                </p>
+
+
+                <blockquote cite="https://zeek.org/">
+                    Zeek has been a cornerstone of the open-source and cybersecurity communities for decades. Originally developed by Vern Paxson in the 1990s under the name “Bro,” Zeek was designed to provide deep insights into network activity across university and national lab networks. In 2018, the project was renamed Zeek to reflect its growing role and evolution in the world of network security. Today, Zeek remains a highly sought after open source solution thanks to the development and financial support of Corelight.
+                </blockquote>
+
+                <blockquote cite="https://zeek.org/">
+                    Unlike traditional security tools such as firewalls or intrusion prevention systems, Zeek is not an active defense mechanism. Instead, it operates quietly on a sensor—whether hardware, software, virtual, or cloud-based—analyzing network traffic in real-time. Zeek captures high-fidelity transaction logs, file contents, and customizable data outputs, which are ideal for manual review or integration into SIEM systems for security analysts.
+                </blockquote>
+
+                <p>
+                    Bro allowed us to monitor and log the specific network traffic we were interested in analyzing. The next task for us was to figure out <em>what</em> data we wanted to capture.
+                </p>
+
+                <h5>Network Signatures:</h5>
+                <p>
+                    What is a network signature? A network signature is a unique pattern or characteristic of network traffic that can be used to identify specific types of behavior or activity. Network signatures can be used to detect malicious activity, for instance malware infections. They can also be used to identify normal user behavior such as browsing YouTube, listenting to music on Spotify, or checking emails.
+                </p>
+
+                <p>
+                    Our next major task was to design and develop our own set of network signatures to identify common user behavior. The first step for us was to use WireShark to record our own network traffic while we performed various activities on our computers. For example, we would record our network traffic while watching videos on Vimeo, listening to music on Pandora, or watching Netflix. We would then analyze the recorded network traffic in WireShark to identify patterns and heuristics of the network traffic that were <em>unique</em> to each activity.
+                </p>
+
+                <p>
+                    After creating our own set of network signatures, we then wrote Bro scripts to implement our network signatures. The Bro scripts would analyze the network traffic monitored by Bro and apply our network signatures to identify and log the specific user behavior we were interested in. This allowed us to automate the process of identifying user behavior based on their network traffic.
+                </p>
+
+                <h5>Testing:</h5>
+                <p>
+                    The next major task was to test our network signatures and Bro scripts. First, we created controlled network traffic recordings where we knew what activities were being performed by a user on the network. We would then run our Bro scripts on the controlled network traffic recordings to see if our network signatures were able to accurately identify the user behavior we were looking for. This allowed us to validate and refine our network signatures and Bro scripts.
+                </p>
+
+                <p>
+                    Second, we had Louis, our PhD student mentor, create his own set of network traffic recordings where he performed various activities (that were unknown to us) on his computer. We then ran our Bro scripts on his network traffic recordings to see if we could identify the user behavior he performed. 
+                </p>
+
+
+                <h5>Conclusion/Results:</h5>
+                <p>
+                     For the final phase of our research project, we had Louis record 48 hours of real network traffic from the UCSD Computer Science and Engineering department's network. This resulted in a vast amount of network traffic to analyze. We then ran our Bro scripts on the recorded network traffic to identify user behavior. The results were promising as our network signatures were able to accurately identify a wide range of user behavior. 
+                </p>
+
+                <p>
+                    The results showed us how many devices during the 48 hour period used the following applications.
+                </p>
+
+                <h5>Results:</h5>
+                <ul>
+                    <li>
+                        Pandora: 10
+                    </li>
+                    <li>
+                        Vimeo: 20
+                    </li>
+                    <li>
+                        AIM: 0
+                    </li>
+                    <li>
+                        Viber: 2
+                    </li>
+                    <li>
+                        Netflix: 4
+                    </li>
+                    <li>
+                        Twitch: 7
+                    </li>
+                </ul>
+
+                <p>
+                    At the conclusion of our research project, we were able to successfully create network signatures that identified a variety of user behavior based on their network traffic. This allowed us to take anonymous network traffic data and analyze it to gain insights into users and their application usage. From this project, I was able to learn a lot about computer networking, network traffic analysis, and how to use Bro (Zeek) and WireShark. 
                 </p>
 
                 <div class="text-container large-gap">
                     <p>
-                        By the end of the summer, I had successfully completed the software program and had helped contribute to David's research project. He even thanked me for my work in his published research paper. The title of the ressearch paper is "Search + Seizure: The Effectiveness of Interventions on SEO Campaigns" and you can read the full paper <a href="https://www.sysnet.ucsd.edu/projects/cloaking/" target="_blank" rel="noopener noreferrer">here</a>.
+                        Below is an image for a poster board we created to present our research project. The poster board summarizes our research project and the results we found.
                     </p>
                 </div>
 
@@ -923,7 +1008,7 @@
                     <a href="https://drive.google.com/file/d/1PrqYG2gqoPiIip0i75nTQxt5qtgbkJRy/view" target="_blank">
                         <img src="./images/sec_group.png" alt="Network Traffic Analysis">
                     </a>
-                </div> -->
+                </div>
                 
 
                 <div class="parallax-container parallax-container-2"> </div>
