@@ -775,7 +775,67 @@
                     </div>
                 </div>
 
+
+                <div class="section-divider no-border"></div>
+
+
+                <h1 class="long-header">Undergraduate Projects</h1>
+
+                <h2>Research Project - Search + Seizure</h2>
+
+                <!-- <a href="https://www.sysnet.ucsd.edu/projects/cloaking/" target="_blank" rel="noopener noreferrer">SSDS</a> -->
+                
+                <p>
+                    During the summer after my first year at UCSD, I worked with a PhD student named <a href="https://www.linkedin.com/in/davidywang/" target="_blank" rel="noopener noreferrer">David Wang</a> and helped contribute to his research project. David was studying Black Hats (a term for malicious hackers) who were abusively manipulating search engine results to steer people towards fradulent websites that sold counterfeit luxury goods. During his research, he identified 52 unique search engine optimization (SEO) campaigns that were selling fake products of sixteen different luxury brands.
+                </p>
+
+                <p>
+                    David created a web crawler to find these fradulent websites and used it to keep a list of all the sites he found. He tasked me with the goal of developing a software program to document and collect information about these nefarious websites.
+                </p>
+
+                <h5>Main Development Tasks:</h5>
+                <ul>
+                    <li>
+                        The program must be able to navigate to each website in the list.
+                    </li>
+                    <li>
+                        The program must pick a product from the site and add it to the cart.
+                    </li>
+                    <li>
+                        Go through the complete checkout process and fill out all forms on the way.
+                    </li>
+                    <li>
+                        Take screenshots of every page of the website during the process.
+                    </li>
+                    <li>
+                        Download the source files (HTML, CSS, etc.) of every page of the website during the process.
+                    </li>
+                    <li>
+                        Automate the program to run once every day.
+                    </li>
+                </ul>
+
+                <p>
+                    The first task was figuring out how to write a program to navigate to a website. After doing some research, I discovered I could use a headless browser to automate web tasks and scraping. A headless browser is a web browser without a graphical user interface (GUI) that can be controlled programmatically. The specific headless browser I ended up using was named <a href="https://github.com/casperjs/casperjs" target="_blank" rel="noopener noreferrer">CasperJS</a>. 
+                </p>
+
+                <p>
+                    After I discovered CasperJS, I read the documentation and learned how to use it to accomplish every task I needed to implement. I was able to program it to navigate to a website, interact with elements on the page, fill out forms, take screenshots, and download the source files of each page. Afterwards, I learned how to use cron jobs to automate the program to run once every day.
+                </p>
+
+                <p>
+                    The professors I worked with and David were very pleased with the results of my work. They especially liked the fact that the program could take screenshots of all of these fradulent websites. This was a great experience for me because I was able to learn how a lot about web scraping and automation.
+                </p>
+
+                <p>
+                    By the end of the summer, I had successfully completed the software program and had helped contribute to David's research project. He even thanked me for my work in his published research paper. The title of the ressearch paper is "Search + Seizure: The Effectiveness of Interventions on SEO Campaigns" and you can read the full paper <a href="https://www.sysnet.ucsd.edu/projects/cloaking/" target="_blank" rel="noopener noreferrer">here</a>.
+                </p>
+
+                
+
+
                 <div class="parallax-container parallax-container-2"> </div>
+
 
             </div>
         </section>

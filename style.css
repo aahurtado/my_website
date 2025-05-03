@@ -129,6 +129,12 @@ div.section-divider {
 }
 
 
+div.section-divider.no-border {
+    border-bottom: none;
+    margin: 30% auto;
+}
+
+
 div.container {
     max-width: var(--website-main-width);  
     margin: 0 auto;
@@ -1032,6 +1038,12 @@ div.footer-bottom p {
         max-width: 75%;
         margin: 35% auto;
     }
+
+
+    div.section-divider.no-border {
+        margin: 45% auto;
+    }
+
 
     code,
     pre {
