@@ -131,10 +131,31 @@ section li {
 }
 
 
-section li ul {
-    margin-top: 2%; 
-    margin-bottom: 2%;
+section ol ul {
+    margin-bottom: 1%;
     margin-left: 5%;
+}
+
+
+section ol ul li {
+    margin-bottom: 1.25%;
+}
+
+
+div.toc-container li {
+    font-size: 1.3rem;
+    margin-bottom: 2%;
+}
+
+
+div.toc-container ol ul {
+    margin-bottom: 2%;
+    margin-left: 7%;
+}
+
+
+div.toc-container ol ul li {
+    margin-bottom: 2.5%;
 }
 
 
@@ -161,19 +182,6 @@ div.heading-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-
-div.toc-container li {
-    font-size: 1.3rem;
-    margin-bottom: 2%;
-}
-
-
-div.toc-container li ul {
-    margin-top: 2%; 
-    margin-bottom: 2%;
-    margin-left: 5%;
 }
 
 
@@ -1095,10 +1103,14 @@ div.footer-bottom p {
     }
 
 
-    section li ul {
-        margin-top: 3%; 
+    section ol ul {
         margin-bottom: 3%;
         margin-left: 7%;
+    }
+    
+    
+    section ol ul li {
+        margin-bottom: 3.222%;
     }
 
 
@@ -1108,10 +1120,14 @@ div.footer-bottom p {
     }
     
     
-    div.toc-container li ul {
-        margin-top: 5%; 
+    div.toc-container ol ul {
         margin-bottom: 5%;
         margin-left: 7%;
+    }
+    
+    
+    div.toc-container ol ul li {
+        margin-bottom: 5.38%;
     }
     
 
