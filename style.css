@@ -145,66 +145,66 @@ section li li {
 }
 
 
-div.toc-container li {
+.toc-container li {
     font-size: 1.3rem;
     margin-bottom: 2%;
 }
 
 
-div.toc-container ol ul {
+.toc-container ol ul {
     margin-top: 2%;
     margin-bottom: 2%;
     margin-left: 7%;
 }
 
 
-div.toc-container li li {
+.toc-container li li {
     margin-bottom: 2.5%;
 }
 
 
-div.section-divider {
+.section-divider {
     border-bottom: 1px solid white;
     max-width: 70%;
     margin: 14% auto;
 }
 
 
-div.section-divider.no-border {
+.section-divider.no-border {
     border-bottom: none;
     margin: 30% auto;
 }
 
 
-div.container {
+.container {
     max-width: var(--website-main-width);  
     margin: 0 auto;
 }
 
 
-div.heading-container {
+.heading-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 
-div.text-container.xl-gap {
+.text-container.xl-gap {
     margin-bottom: 15%;
 }
 
 
-div.text-container.large-gap {
+.text-container.large-gap {
     margin-bottom: 12%;
 }
 
 
-div.text-container.medium-gap {
+.text-container.medium-gap {
     margin-bottom: 7%;
 }
 
 
-div.text-container.small-gap {
+.text-container.small-gap {
     margin-bottom: 5%;
 }
 
@@ -643,7 +643,7 @@ section.projects {
 
 /* ***************************************************************************** */
 /* Image Container */
-/* div.image-container {
+/* .image-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -663,7 +663,7 @@ section.projects {
 }
 
 
-div.image-container img {
+.image-container img {
     max-width: calc(var(--half-width) - var(--half-image-gap));
     height: auto;
     transition-property: transform, box-shadow;
@@ -673,53 +673,53 @@ div.image-container img {
 }
 
 
-div.image-container img:hover {
+.image-container img:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     transform: scale(var(--image-scale-hover));
 }
 
 
-div.image-container a {
+.image-container a {
     max-width: calc(var(--half-width) - var(--half-image-gap));
     height: auto;
 }
 
 
-div.image-container figure {
+.image-container figure {
     max-width: calc(var(--half-width) - var(--half-image-gap));
     height: auto;
 }
 
 
-div.image-container a img {
+.image-container a img {
     max-width: 100%;
     height: auto;
     object-fit: contain;
 }
 
 
-div.image-container figure img {
+.image-container figure img {
     max-width: 100%;
     height: auto;
     object-fit: contain;
 }
 
 
-div.image-container img:only-child {
+.image-container img:only-child {
     max-width: 100%;
     height: auto;
     object-fit: contain;
 }
 
 
-div.image-container a:only-child {
+.image-container a:only-child {
     max-width: 100%;
     height: auto;
     object-fit: contain;
 }
 
 
-div.image-container figure:only-child {
+.image-container figure:only-child {
     max-width: 100%;
     height: auto;
     object-fit: contain;
@@ -818,7 +818,7 @@ img.text-width {
 
 
 
-div.image-container img:hover {
+.image-container img:hover {
     box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.4), 0 0 2rem rgba(0, 0, 0, 0.2);
     transform: scale(var(--image-scale-hover));
 }
@@ -871,7 +871,7 @@ footer {
 }
 
 
-div.footer-container {
+.footer-container {
     max-width: 80%;
     margin: 0 auto;
     display: flex;
@@ -881,7 +881,7 @@ div.footer-container {
 }
 
 
-div.footer-content {
+.footer-content {
     flex-grow: 1;
     flex-basis: 0;
     min-width: var(--footer-content-min-width);
@@ -889,7 +889,7 @@ div.footer-content {
 }
 
 
-div.footer-content h4 {
+.footer-content h4 {
     color: white;
     font-size: 1.3rem;
     margin-bottom: 5%;
@@ -899,7 +899,7 @@ div.footer-content h4 {
 }
 
 
-div.footer-content p {
+.footer-content p {
     max-width: 100%;
     margin-bottom: 3%;
     font-size: 1.0rem;
@@ -907,19 +907,19 @@ div.footer-content p {
 }
 
 
-div.footer-content a {
+.footer-content a {
     color: white;
     text-decoration: none;
     transition: color var(--transition-duration-quick) var(--transition-style) var(--transition-delay);
 }
 
 
-div.footer-content a:hover {
+.footer-content a:hover {
     color: var(--nav-link-hover-color);
 }
 
 
-div.footer-bottom {
+.footer-bottom {
     padding-top: 2.5%;
     border-top: 1px solid var(--footer-border-color);
     font-size: 0.8rem;
@@ -927,7 +927,7 @@ div.footer-bottom {
 } 
 
 
-div.footer-bottom p {
+.footer-bottom p {
     text-align: center;
     margin-bottom: 3.5%;
 }
@@ -957,27 +957,27 @@ div.footer-bottom p {
     }
     
        
-    div.container {
+    .container {
         max-width: var(--website-main-width-mobile);  
     }
 
 
-    div.text-container.xl-gap {
+    .text-container.xl-gap {
         margin-bottom: 20%;
     }
 
 
-    div.text-container.large-gap {
+    .text-container.large-gap {
         margin-bottom: 17%;
     }
 
     
-    div.text-container.medium-gap {
+    .text-container.medium-gap {
         margin-bottom: 13%;
     }
 
 
-    div.text-container.small-gap {
+    .text-container.small-gap {
         margin-bottom: 7%;
     }
 
@@ -1119,20 +1119,20 @@ div.footer-bottom p {
     }
 
 
-    div.toc-container li {
+    .toc-container li {
         font-size: 1.1rem;
         margin-bottom: 5%;
     }
     
     
-    div.toc-container ol ul {
+    .toc-container ol ul {
         margin-top: 5%;
         margin-bottom: 5%;
         margin-left: 7%;
     }
     
     
-    div.toc-container li li {
+    .toc-container li li {
         margin-bottom: 5.38%;
     }
     
@@ -1142,13 +1142,13 @@ div.footer-bottom p {
     }
 
 
-    div.section-divider {
+    .section-divider {
         max-width: 75%;
         margin: 35% auto;
     }
 
 
-    div.section-divider.no-border {
+    .section-divider.no-border {
         margin: 45% auto;
     }
 
@@ -1176,28 +1176,28 @@ div.footer-bottom p {
     }
 
 
-    div.footer-content {
+    .footer-content {
         margin: 10% 0;
     }
 
 
-    div.footer-content h4 {
+    .footer-content h4 {
         margin-bottom: 8%;
     }
 
 
-    div.footer-content p {
+    .footer-content p {
         margin: 6% 0;
     }
 
 
-    div.footer-bottom {
+    .footer-bottom {
         margin-top: 12%;
         padding-top: 17%;
     } 
 
 
-    div.footer-bottom p {
+    .footer-bottom p {
         margin-bottom: 20%;
     }
 
@@ -1231,7 +1231,7 @@ div.footer-bottom p {
 
 /* For 1440p screens (2560px and up) */
 @media screen and (min-width: 2560px) {
-    div.container {
+    .container {
         max-width: var(--website-main-width-ultrawide-2560);
     }
 
@@ -1245,7 +1245,7 @@ div.footer-bottom p {
 
 /* For ultrawide screens (3440px and up) */
 @media screen and (min-width: 3440px) {
-    div.container {
+    .container {
         max-width: var(--website-main-width-ultrawide-3440);
     }
 
