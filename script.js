@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const firstPic = document.querySelector('.first-pic');
+    if (firstPic) {
+        firstPic.setAttribute('src', firstPic.getAttribute('data-src'));
+        if (window.matchMedia('(max-width: 767px)').matches) {
+            firstPic.setAttribute('loading', 'lazy');
+        }
+    }
+});
+
+
+
 function openFullscreen(img) {
     const fullscreenDiv = document.createElement('div');
 
