@@ -67,7 +67,7 @@ function updateCopyrightYear() {
     if (copyrightElement) {
         const currentYear = new Date().getFullYear();
         const startYear = 2025;
-        const yearText = startYear === currentYear ? startYear : `${startYear} - ${currentYear}`;
+        const yearText = startYear === currentYear ? startYear : `${startYear}-${currentYear}`;
         copyrightElement.innerHTML = `Copyright &copy; ${yearText}`;
     }
 }
