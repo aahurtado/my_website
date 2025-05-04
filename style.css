@@ -132,12 +132,13 @@ section li {
 
 
 section ol ul {
+    margin-top: 1%;
     margin-bottom: 1%;
     margin-left: 5%;
 }
 
 
-section ol ul li {
+section li li {
     margin-bottom: 1.25%;
 }
 
@@ -149,12 +150,13 @@ div.toc-container li {
 
 
 div.toc-container ol ul {
+    margin-top: 2%;
     margin-bottom: 2%;
     margin-left: 7%;
 }
 
 
-div.toc-container ol ul li {
+div.toc-container li li {
     margin-bottom: 2.5%;
 }
 
@@ -1104,12 +1106,13 @@ div.footer-bottom p {
 
 
     section ol ul {
+        margin-top: 3%;
         margin-bottom: 3%;
         margin-left: 7%;
     }
     
     
-    section ol ul li {
+    section li li {
         margin-bottom: 3.222%;
     }
 
@@ -1121,12 +1124,13 @@ div.footer-bottom p {
     
     
     div.toc-container ol ul {
+        margin-top: 5%;
         margin-bottom: 5%;
         margin-left: 7%;
     }
     
     
-    div.toc-container ol ul li {
+    div.toc-container li li {
         margin-bottom: 5.38%;
     }
     
