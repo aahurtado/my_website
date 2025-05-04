@@ -834,6 +834,7 @@ div.image-container img:hover {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
+    pointer-events: none; 
 }
 
 
