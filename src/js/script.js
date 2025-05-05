@@ -120,6 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 observer.unobserve(container);
             }
         });
+    }, {
+        rootMargin: '125%' 
     });
 
     lazyContainers.forEach(container => observer.observe(container));
