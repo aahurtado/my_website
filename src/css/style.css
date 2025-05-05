@@ -799,15 +799,19 @@ section.projects {
 }
 
 
+.parallax-container img {
+    display: none;
+}
+
 
 .parallax-container-1 {
-    background-image: url('../images/ucsd_lib2.png');
+    /* background-image: url('../images/ucsd_lib2.png'); */
     background-position: 50% 5vh;
 }
 
 
 .parallax-container-2 {
-    background-image: url('../images/matrix.jpg');
+    /* background-image: url('../images/matrix.jpg'); */
     filter: brightness(0.85);
 }
 
