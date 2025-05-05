@@ -1,0 +1,32 @@
+{
+  "name": "my_website",
+  "version": "1.0.0",
+  "description": "A portfolio website showcasing my experience, projects, and skills as a Software Engineer.",
+  "main": "script.js",
+  "scripts": {
+    "build": "npm run minify-html && npm run minify-css && npm run minify-js && npm run copy-assets",
+    "minify-html": "html-minifier --input-dir ./src --output-dir ./dist --collapse-whitespace --remove-comments --minify-css --minify-js --file-ext html",
+    "minify-css": "mkdirp dist/css && postcss ./src/css/*.css --use cssnano --no-map -d ./dist/css || echo Failed to minify CSS",
+    "minify-js": "node minify-js.js || echo Failed to minify JS",
+    "copy-assets": "node copy-assets.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aahurtado/my_website.git"
+  },
+  "keywords": [],
+  "author": "aahurtado",
+  "license": "MIT",
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "html-minifier": "^4.0.0",
+    "mkdirp": "^3.0.1",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "terser": "^5.39.0"
+  },
+  "bugs": {
+    "url": "https://github.com/aahurtado/my_website/issues"
+  },
+  "homepage": "https://github.com/aahurtado/my_website#readme"
+}
