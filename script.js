@@ -1,34 +1,3 @@
-function openFullscreen(img) {
-    const fullscreenDiv = document.createElement('div');
-
-    fullscreenDiv.classList.add('fullscreen');
-
-    const imgClone = img.cloneNode();
-
-    fullscreenDiv.appendChild(imgClone);
-    document.body.appendChild(fullscreenDiv);
-
-    fullscreenDiv.addEventListener('click', () => {
-        fullscreenDiv.remove();
-    });
-}
-
-
-
-
-function copyLinkToClipboard(event, id) {
-    event.preventDefault(); 
-    const url = `${window.location.origin}${window.location.pathname}#${id}`;
-    navigator.clipboard.writeText(url).then(() => {
-        alert('Link copied to clipboard!'); 
-    }).catch(err => {
-        console.error('Failed to copy link: ', err);
-    });
-}
-
-
-
-
 function updateActiveSection() {
     // Get all sections
     const sections = document.querySelectorAll('section');
@@ -62,6 +31,47 @@ function updateActiveSection() {
 
 
 
+function updateProgressBar() {
+    const winScroll = window.scrollY;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+}
+
+
+
+
+function openFullscreen(img) {
+    const fullscreenDiv = document.createElement('div');
+
+    fullscreenDiv.classList.add('fullscreen');
+
+    const imgClone = img.cloneNode();
+
+    fullscreenDiv.appendChild(imgClone);
+    document.body.appendChild(fullscreenDiv);
+
+    fullscreenDiv.addEventListener('click', () => {
+        fullscreenDiv.remove();
+    });
+}
+
+
+
+
+function copyLinkToClipboard(event, id) {
+    event.preventDefault(); 
+    const url = `${window.location.origin}${window.location.pathname}#${id}`;
+    navigator.clipboard.writeText(url).then(() => {
+        alert('Link copied to clipboard!'); 
+    }).catch(err => {
+        console.error('Failed to copy link: ', err);
+    });
+}
+
+
+
+
 function updateCopyrightYear() {
     const copyrightElement = document.getElementById('copyright');
     if (copyrightElement) {
@@ -75,16 +85,31 @@ function updateCopyrightYear() {
 
 
 
-function updateProgressBar() {
-    const winScroll = window.scrollY;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    document.getElementById("progressBar").style.width = scrolled + "%";
-}
+// Performs lazy loading of background images for parallax containers
+document.addEventListener("DOMContentLoaded", () => {
+    const lazyContainers = document.querySelectorAll(".parallax-container");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const container = entry.target;
+                const src = container.getAttribute("data-src");
+                if (src) {
+                    container.style.backgroundImage = `url('${src}')`;
+                    container.removeAttribute("data-src");
+                }
+                observer.unobserve(container);
+            }
+        });
+    });
+
+    lazyContainers.forEach(container => observer.observe(container));
+});
 
 
 
 
+// Performs 3D tilt effect on cards when mouse moves over them
 document.addEventListener('DOMContentLoaded', function() {
     // Check if device is not mobile (screen width > 767px)
     if (window.innerWidth > 767) {
