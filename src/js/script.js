@@ -41,7 +41,7 @@ function updateProgressBar() {
 
 
 
-function openFullscreen(img) {
+window.openFullscreen = function openFullscreen(img) {
     const fullscreenDiv = document.createElement('div');
 
     fullscreenDiv.classList.add('fullscreen');
@@ -59,7 +59,7 @@ function openFullscreen(img) {
 
 
 
-function copyLinkToClipboard(event, id) {
+window.copyLinkToClipboard = function copyLinkToClipboard(event, id) {
     event.preventDefault(); 
     const url = `${window.location.origin}${window.location.pathname}#${id}`;
     navigator.clipboard.writeText(url).then(() => {
