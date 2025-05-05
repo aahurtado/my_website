@@ -2,10 +2,11 @@
     "name": "my_website",
     "version": "1.0.0",
     "description": "A portfolio website showcasing my experience, projects, and skills as a Software Engineer.",
+    "source": "src/index.html",
     "scripts": {
         "clean": "rimraf .parcel-cache dist",
-        "build": "parcel build src/index.html --dist-dir dist --no-source-maps",
-        "start": "parcel src/index.html --dist-dir dist"
+        "build": "parcel build --dist-dir dist --no-source-maps",
+        "start": "parcel --dist-dir dist"
     },
     "repository": {
         "type": "git",
