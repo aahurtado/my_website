@@ -341,7 +341,7 @@
 
                 <div class="image-container">
                     <figure>
-                        <img src="./images/hedis_measures.PNG" alt="HEDIS Measure Descriptions" onclick="openFullscreen(this)" class="clickable-image" loading="lazy" width="1726" height="1332">
+                        <img src="./images/hedis_measures.png" alt="HEDIS Measure Descriptions" onclick="openFullscreen(this)" class="clickable-image" loading="lazy" width="1726" height="1332">
                         <figcaption>Brief HEDIS measure descriptions</figcaption>
                     </figure>
                 </div>
@@ -625,7 +625,7 @@
 
                 <div class="image-container">
                     <figure>
-                        <img src="./images/freqtrade_results.PNG" alt="Freqtrade Results" onclick="openFullscreen(this)" class="clickable-image" loading="lazy" width="1157" height="843">
+                        <img src="./images/freqtrade_results.png" alt="Freqtrade Results" onclick="openFullscreen(this)" class="clickable-image" loading="lazy" width="1157" height="843">
                         <figcaption>My Freqtrade Results</figcaption>
                     </figure>
                 </div>
@@ -975,7 +975,7 @@
 
                 <div class="image-container">
                     <a href="https://www.sysnet.ucsd.edu/projects/cloaking/searchseizure-IMC14v2.pdf" target="_blank" rel="noopener noreferrer">
-                        <img src="./images/research_paper_1.PNG" alt="Search + Seizure: The Effectiveness of Interventions on SEO Campaigns" class="text-width" loading="lazy" width="1700" height="2200">
+                        <img src="./images/research_paper_1.png" alt="Search + Seizure: The Effectiveness of Interventions on SEO Campaigns" class="text-width" loading="lazy" width="1700" height="2200">
                     </a>
                 </div> 
 
@@ -1163,8 +1163,26 @@
     </main>
 
     <script src="./js/script.js"></script>
-    <script defer src="/_vercel/insights/script.js"></script>
-    <script defer src="/_vercel/speed-insights/script.js"></script>
+    <!-- <script defer src="/_vercel/insights/script.js"></script> -->
+    <!-- <script defer src="/_vercel/speed-insights/script.js"></script> -->
+
+    <script>
+        // Load Vercel Insight scripts only in production
+        const isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
+      
+        if (isProduction) {
+          const insightsScript = document.createElement('script');
+          insightsScript.defer = true;
+          insightsScript.src = '/_vercel/insights/script.js';
+          document.body.appendChild(insightsScript);
+      
+          const speedScript = document.createElement('script');
+          speedScript.defer = true;
+          speedScript.src = '/_vercel/speed-insights/script.js';
+          document.body.appendChild(speedScript);
+        }
+      </script>
+
 </body>
 
 
