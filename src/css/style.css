@@ -10,7 +10,7 @@
 @font-face {
     font-family: 'Roboto';
     /* src: url('./fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype'); */
-    src: url('./fonts/Roboto-VariableFont_wdth,wght.woff2') format('woff2');
+    src: url('../fonts/Roboto-VariableFont_wdth,wght.woff2') format('woff2');
     font-weight: 100 900; 
     font-stretch: 75% 100%;
     font-style: normal;
@@ -21,7 +21,7 @@
 @font-face {
     font-family: 'Roboto';
     /* src: url('./fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype'); */
-    src: url('./fonts/Roboto-Italic-VariableFont_wdth,wght.woff2') format('woff2');
+    src: url('../fonts/Roboto-Italic-VariableFont_wdth,wght.woff2') format('woff2');
     font-weight: 100 900; 
     font-stretch: 75% 100%;
     font-style: italic;
