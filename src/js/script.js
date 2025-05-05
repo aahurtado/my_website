@@ -89,6 +89,25 @@ function updateCopyrightYear() {
 document.addEventListener("DOMContentLoaded", () => {
     const lazyContainers = document.querySelectorAll(".parallax-container");
 
+    const ucsdLibImage = new URL('../images/ucsd_lib2.png', import.meta.url).href;
+    const matrixImage = new URL('../images/matrix.jpg', import.meta.url).href;
+
+    // Map container classes to their respective images
+    const imageMap = {
+        "parallax-container-1": ucsdLibImage, 
+        "parallax-container-2": matrixImage, 
+    };
+
+    // Set the data-src attributes dynamically
+    lazyContainers.forEach(container => {
+        const className = Array.from(container.classList).find(cls => imageMap[cls]);
+        if (className) {
+            const imageSrc = imageMap[className];
+            container.setAttribute("data-src", imageSrc);
+        }
+    });
+
+    // Lazy loading logic
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
