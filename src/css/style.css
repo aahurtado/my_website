@@ -1302,8 +1302,8 @@ footer {
         /* aspect-ratio: 21 / 9; */
         /* aspect-ratio: 32 / 9; */
         /* aspect-ratio: 4 / 1; */
-        aspect-ratio: 3 / 1;
-        /* aspect-ratio: 2 / 1; */
+        /* aspect-ratio: 3 / 1; */
+        aspect-ratio: 2 / 1;
     }
 }
 
@@ -1313,6 +1313,17 @@ footer {
     .container {
         max-width: var(--website-main-width-ultrawide-3440);
     }
+
+
+    .hero {
+        /* aspect-ratio: 16 / 9; */
+        /* aspect-ratio: 21 / 9; */
+        /* aspect-ratio: 32 / 9; */
+        /* aspect-ratio: 4 / 1; */
+        aspect-ratio: 3 / 1;
+        /* aspect-ratio: 2 / 1; */
+    }
+    
 
     .parallax-container-1 {
         background-position: 50% 0vh;
