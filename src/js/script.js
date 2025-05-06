@@ -177,8 +177,4 @@ document.addEventListener('DOMContentLoaded', () => {
     updateActiveSection();
     updateCopyrightYear();
     updateProgressBar();
-
-    const websiteImage = new URL('../images/stock_chart.webp', import.meta.url).href;
-    document.querySelector('meta[property="og:image"]').setAttribute('content', websiteImage);
-    document.querySelector('meta[property="twitter:image"]').setAttribute('content', websiteImage);
 });
