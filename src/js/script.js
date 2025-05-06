@@ -49,14 +49,40 @@ const images = [
     // console.log("randomIndex:", randomIndex);
 
     const image = images[randomIndex];
+
+    // const image = new URL('../images/banner_1.webp', import.meta.url).href;
     // console.log("Random Image:", image);
 
-    // const pickedImage = new URL('../images/banner_1.webp', import.meta.url).href;
+    checkHeroBackgroundAspectRatio(image)
+
+    hero.style.backgroundImage = `url('${image}')`;
+  });
 
 
+
+
+// Handle images with aspect ratio > 2.4 only if the screen width is at least 3440px
+const mediaQuery = window.matchMedia("(min-width: 3440px)");
+
+function handleMediaChange(e) {
+    if (e.matches) {
+        const backgroundImage = hero.style.backgroundImage;
+        const imageUrl = backgroundImage.slice(5, -2);
+        console.log("imageUrl:", imageUrl);
+        checkHeroBackgroundAspectRatio(imageUrl);
+    } 
+}
+
+mediaQuery.addEventListener("change", handleMediaChange);
+  
+
+
+
+
+function checkHeroBackgroundAspectRatio(Url) {
     // Handle images with aspect ratio > 2.4 only if the screen width is at least 3440px
     const imgElement = new Image();
-    imgElement.src = image;
+    imgElement.src = Url;
     
     imgElement.onload = () => {
         // console.log("Image width:", imgElement.naturalWidth);
@@ -76,13 +102,7 @@ const images = [
     imgElement.onerror = () => {
         console.error("Failed to load the image.");
     };
-
-
-
-    hero.style.backgroundImage = `url('${image}')`;
-    // hero.style.backgroundImage = `url('${pickedImage}')`;
-  });
-  
+}
 
 
 
