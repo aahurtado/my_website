@@ -3,15 +3,28 @@
     "version": "1.0.0",
     "description": "A portfolio website showcasing my experience, projects, and skills as a Software Engineer.",
     "source": "src/index.html",
+    "targets": {
+        "default": {
+            "distDir": "dist",
+            "sourceMap": { "inline": false }
+        },
+        "prod": {
+            "distDir": "dist",
+            "sourceMap": false
+        }
+    },
     "scripts": {
         "clean": "rimraf .parcel-cache dist",
-        "build": "parcel build --dist-dir dist --no-source-maps",
-        "start": "parcel --dist-dir dist"
+        "build": "parcel build --target prod",
+        "start": "parcel"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/aahurtado/my_website.git"
     },
+    "browserslist": [
+        "defaults"
+    ],
     "keywords": [],
     "author": "Aaron Hurtado",
     "license": "MIT",
