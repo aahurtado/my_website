@@ -1,3 +1,33 @@
+// Import all images statically so Parcel can track them
+const images = [
+    new URL('../images/banner_1.webp', import.meta.url).href,
+    new URL('../images/banner_2.webp', import.meta.url).href,
+    new URL('../images/banner_3.webp', import.meta.url).href,
+    new URL('../images/banner_4.webp', import.meta.url).href,
+    new URL('../images/banner_5.webp', import.meta.url).href,
+    new URL('../images/banner_6.webp', import.meta.url).href,
+    new URL('../images/banner_7.webp', import.meta.url).href,
+    new URL('../images/banner_8.webp', import.meta.url).href,
+    new URL('../images/banner_9.webp', import.meta.url).href,
+    new URL('../images/banner_10.webp', import.meta.url).href
+  ];
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const hero = document.getElementById("hero");
+
+    const randomIndex = Math.floor(Math.random() * images.length);
+    // console.log("randomIndex:", randomIndex);
+
+    const image = images[randomIndex];
+    // console.log("Random Image:", image);
+  
+    hero.style.backgroundImage = `url('${image}')`;
+  });
+  
+
+
+
+
 function updateActiveSection() {
     // Get all sections
     const sections = document.querySelectorAll('section');

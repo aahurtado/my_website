@@ -99,6 +99,37 @@ body {
 }
 
 
+.hero {
+    margin-top: var(--nav-topbar-height-offset);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    /* aspect-ratio: 16 / 9; */
+    /* aspect-ratio: 21 / 9; */
+    /* aspect-ratio: 32 / 9; */
+    /* aspect-ratio: 4 / 1; */
+    /* aspect-ratio: 3 / 1; */
+    aspect-ratio: 2 / 1;
+    /* height: 40vh; */
+}
+
+
+.hero-content {
+    max-width: var(--website-main-width);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding-top: 5%;
+}
+
+
+
 /* width, height, padding, border, and margins should use % */
 /* ***************************************************************************** */
 /* Main Content */
@@ -582,7 +613,7 @@ section.about_me {
     /* background-color: #1d2339; */
     background-color: var(--color-classic-blue);
     /* background-color: lightblue; */
-    margin-top: var(--nav-topbar-height-offset);
+    /* margin-top: var(--nav-topbar-height-offset); */
     /* scroll-margin-top: 70px; */
 }
 
@@ -963,6 +994,20 @@ footer {
     }
 
 
+    .hero {
+        aspect-ratio: 16 / 9;
+        /* aspect-ratio: 9 / 16; */
+        /* aspect-ratio: 3 / 4; */
+        /* aspect-ratio: 4 / 5; */
+        /* aspect-ratio: 1 / 1; */
+    }
+
+
+    .hero-content h1 {
+        font-size: 2.0rem;
+    }
+
+
     .progress-container {
         top: var(--nav-topbar-height-offset);
     }
@@ -1252,6 +1297,14 @@ footer {
         padding-bottom: 7%;
     }
 
+    .hero {
+        /* aspect-ratio: 16 / 9; */
+        /* aspect-ratio: 21 / 9; */
+        /* aspect-ratio: 32 / 9; */
+        /* aspect-ratio: 4 / 1; */
+        aspect-ratio: 3 / 1;
+        /* aspect-ratio: 2 / 1; */
+    }
 }
 
 
