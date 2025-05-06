@@ -134,7 +134,8 @@ section li {
 }
 
 
-section ol ul {
+section ol ul,
+section ul ul {
     margin-top: 1%;
     margin-bottom: 1%;
     margin-left: 5%;
