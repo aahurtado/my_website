@@ -35,6 +35,11 @@ const images = [
     new URL('../images/banner_33.webp', import.meta.url).href,
     new URL('../images/banner_34.webp', import.meta.url).href,
     new URL('../images/banner_35.webp', import.meta.url).href,
+    new URL('../images/banner_36.webp', import.meta.url).href,
+    new URL('../images/banner_37.webp', import.meta.url).href,
+    new URL('../images/banner_38.webp', import.meta.url).href,
+    new URL('../images/banner_39.webp', import.meta.url).href,
+    new URL('../images/banner_40.webp', import.meta.url).href,
 ];
   
   document.addEventListener("DOMContentLoaded", () => {
@@ -46,7 +51,7 @@ const images = [
     const image = images[randomIndex];
     // console.log("Random Image:", image);
 
-    // const pickedImage = new URL('../images/banner_35.webp', import.meta.url).href;
+    // const pickedImage = new URL('../images/banner_39.webp', import.meta.url).href;
 
     hero.style.backgroundImage = `url('${image}')`;
     // hero.style.backgroundImage = `url('${pickedImage}')`;
