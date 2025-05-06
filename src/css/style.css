@@ -103,6 +103,7 @@ body {
     margin-top: var(--nav-topbar-height-offset);
     background-size: cover;
     background-position: center;
+    /* background-position: bottom; */
     background-repeat: no-repeat;
     width: 100%;
     /* aspect-ratio: 16 / 9; */
@@ -1298,6 +1299,10 @@ footer {
     }
 
     .hero {
+        /* background-position: top; */
+        background-position: center;
+        /* background-position: bottom; */
+
         /* aspect-ratio: 16 / 9; */
         /* aspect-ratio: 21 / 9; */
         /* aspect-ratio: 32 / 9; */
@@ -1316,6 +1321,10 @@ footer {
 
 
     .hero {
+        /* background-position: top; */
+        /* background-position: center; */
+        background-position: 50% -20vh;
+
         /* aspect-ratio: 16 / 9; */
         /* aspect-ratio: 21 / 9; */
         /* aspect-ratio: 32 / 9; */
