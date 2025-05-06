@@ -130,6 +130,11 @@ body {
 }
 
 
+.hero h1 {
+    text-shadow: 0 0 2.0rem rgba(0, 0, 0, 0.4);
+}
+
+
 
 /* width, height, padding, border, and margins should use % */
 /* ***************************************************************************** */
