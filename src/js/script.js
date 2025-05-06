@@ -9,8 +9,33 @@ const images = [
     new URL('../images/banner_7.webp', import.meta.url).href,
     new URL('../images/banner_8.webp', import.meta.url).href,
     new URL('../images/banner_9.webp', import.meta.url).href,
-    new URL('../images/banner_10.webp', import.meta.url).href
-  ];
+    new URL('../images/banner_10.webp', import.meta.url).href,
+    new URL('../images/banner_11.webp', import.meta.url).href,
+    new URL('../images/banner_12.webp', import.meta.url).href,
+    new URL('../images/banner_13.webp', import.meta.url).href,
+    new URL('../images/banner_14.webp', import.meta.url).href,
+    new URL('../images/banner_15.webp', import.meta.url).href,
+    new URL('../images/banner_16.webp', import.meta.url).href,
+    new URL('../images/banner_17.webp', import.meta.url).href,
+    new URL('../images/banner_18.webp', import.meta.url).href,
+    new URL('../images/banner_19.webp', import.meta.url).href,
+    new URL('../images/banner_20.webp', import.meta.url).href,
+    new URL('../images/banner_21.webp', import.meta.url).href,
+    new URL('../images/banner_22.webp', import.meta.url).href,
+    new URL('../images/banner_23.webp', import.meta.url).href,
+    new URL('../images/banner_24.webp', import.meta.url).href,
+    new URL('../images/banner_25.webp', import.meta.url).href,
+    new URL('../images/banner_26.webp', import.meta.url).href,
+    new URL('../images/banner_27.webp', import.meta.url).href,
+    new URL('../images/banner_28.webp', import.meta.url).href,
+    new URL('../images/banner_29.webp', import.meta.url).href,
+    new URL('../images/banner_30.webp', import.meta.url).href,
+    new URL('../images/banner_31.webp', import.meta.url).href,
+    new URL('../images/banner_32.webp', import.meta.url).href,
+    new URL('../images/banner_33.webp', import.meta.url).href,
+    new URL('../images/banner_34.webp', import.meta.url).href,
+    new URL('../images/banner_35.webp', import.meta.url).href,
+];
   
   document.addEventListener("DOMContentLoaded", () => {
     const hero = document.getElementById("hero");
@@ -20,8 +45,11 @@ const images = [
 
     const image = images[randomIndex];
     // console.log("Random Image:", image);
-  
+
+    // const pickedImage = new URL('../images/banner_35.webp', import.meta.url).href;
+
     hero.style.backgroundImage = `url('${image}')`;
+    // hero.style.backgroundImage = `url('${pickedImage}')`;
   });
   
 
