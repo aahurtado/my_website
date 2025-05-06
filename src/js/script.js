@@ -42,7 +42,7 @@ const images = [
     new URL('../images/banner_40.webp', import.meta.url).href,
 ];
   
-  document.addEventListener("DOMContentLoaded", () => {
+ document.addEventListener("DOMContentLoaded", () => {
     const hero = document.getElementById("hero");
 
     const randomIndex = Math.floor(Math.random() * images.length);
@@ -51,7 +51,33 @@ const images = [
     const image = images[randomIndex];
     // console.log("Random Image:", image);
 
-    // const pickedImage = new URL('../images/banner_39.webp', import.meta.url).href;
+    // const pickedImage = new URL('../images/banner_1.webp', import.meta.url).href;
+
+
+    // Handle images with aspect ratio > 2.4 only if the screen width is at least 3440px
+    const imgElement = new Image();
+    imgElement.src = image;
+    
+    imgElement.onload = () => {
+        // console.log("Image width:", imgElement.naturalWidth);
+        // console.log("Image height:", imgElement.naturalHeight);
+        const aspectRatio = imgElement.naturalWidth / imgElement.naturalHeight;
+        // console.log(`Aspect Ratio: ${aspectRatio}`);
+
+        if (aspectRatio > 2.4) {
+            if (window.matchMedia("(min-width: 3440px)").matches) {
+                hero.style.backgroundPosition = "center";
+                // console.log("Screen is at least 3440px wide, background-position set to center.");
+            } 
+        }
+    };
+    
+    // Handle errors if the image fails to load
+    imgElement.onerror = () => {
+        console.error("Failed to load the image.");
+    };
+
+
 
     hero.style.backgroundImage = `url('${image}')`;
     // hero.style.backgroundImage = `url('${pickedImage}')`;
