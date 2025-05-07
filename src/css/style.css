@@ -1074,7 +1074,9 @@ footer {
         background-attachment: scroll;
         background-position: center;
         margin: 30% 0;
-        height: 25vh;
+        /* height: 25vh; */
+
+        aspect-ratio: 16 / 9;
     }
 
 
