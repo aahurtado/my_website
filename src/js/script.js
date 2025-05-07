@@ -213,6 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (className) {
             const imageSrc = imageMap[className];
             container.setAttribute("data-src", imageSrc);
+            // console.log(`Setting data-src for ${className}: ${imageSrc}`);
         }
     });
 
@@ -225,6 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (src) {
                     container.style.backgroundImage = `url('${src}')`;
                     container.removeAttribute("data-src");
+                    // console.log(`Loaded background image for ${container.className}: ${src}`);
                 }
                 observer.unobserve(container);
             }

@@ -831,12 +831,20 @@ section.projects {
     background-size: cover;
 
     width: 100vw;
-    height: 50vh;
+    /* height: 50vh; */
     position: relative;
     left: calc(-50vw + 50%);
 
     margin: 25% 0;
     overflow: hidden;
+
+    /* aspect-ratio: 16 / 9; */
+    /* aspect-ratio: 21 / 9; */
+    aspect-ratio: 32 / 9;
+    /* aspect-ratio: 4 / 1; */
+    /* aspect-ratio: 3 / 1; */
+    /* aspect-ratio: 2 / 1; */
+    /* aspect-ratio: 1 / 1; */
 }
 
 
@@ -847,7 +855,14 @@ section.projects {
 
 .parallax-container-1 {
     /* background-image: url('../images/ucsd_lib2.png'); */
-    background-position: 50% 5vh;
+    /* background-position: 50% 5vh; */
+    /* aspect-ratio: 16 / 9; */
+    /* aspect-ratio: 21 / 9; */
+    /* aspect-ratio: 32 / 9; */
+    /* aspect-ratio: 4 / 1; */
+    aspect-ratio: 3 / 1;
+    /* aspect-ratio: 2 / 1; */
+    /* aspect-ratio: 1 / 1; */
 }
 
 
@@ -1298,10 +1313,12 @@ footer {
         max-width: var(--website-main-width-ultrawide-2560);
     }
 
+
     section {
         padding-top: 5%;
         padding-bottom: 7%;
     }
+
 
     .hero {
         /* background-position: top; */
@@ -1315,7 +1332,23 @@ footer {
         /* aspect-ratio: 3 / 1; */
         aspect-ratio: 2 / 1;
     }
+
+
+    .parallax-container {
+        /* aspect-ratio: 32 / 9; */
+        aspect-ratio: 5 / 1;
+        /* aspect-ratio: 4 / 1; */
+    }
+
+
+    .parallax-container-1 {
+        /* aspect-ratio: 32 / 9; */
+        /* aspect-ratio: 4 / 1; */
+        aspect-ratio: 3 / 1;
+    }
 }
+
+
 
 
 /* For ultrawide screens (3440px and up) */
@@ -1337,18 +1370,24 @@ footer {
         aspect-ratio: 3 / 1;
         /* aspect-ratio: 2 / 1; */
     }
-    
+
 
     .parallax-container-1 {
-        background-position: 50% 0vh;
+        background-position: 50% -5vh;
+        /* background-image: url('../images/ucsd_lib2.png'); */
+        /* aspect-ratio: 32 / 9; */
+        aspect-ratio: 4 / 1;
+        /* aspect-ratio: 3 / 1; */
     }
-
 }
+
+
 
 
 .tilt-card-container {
     perspective: 80vw;
 }
+
 
 .tilt-card {
     transform-style: preserve-3d;
