@@ -40,6 +40,9 @@ const images = [
     new URL('../images/banner_38.webp', import.meta.url).href,
     new URL('../images/banner_39.webp', import.meta.url).href,
     new URL('../images/banner_40.webp', import.meta.url).href,
+    new URL('../images/banner_41.webp', import.meta.url).href,
+    new URL('../images/banner_42.webp', import.meta.url).href,
+    new URL('../images/banner_43.webp', import.meta.url).href,
 ];
   
  document.addEventListener("DOMContentLoaded", () => {
@@ -50,7 +53,7 @@ const images = [
 
     const image = images[randomIndex];
 
-    // const image = new URL('../images/banner_1.webp', import.meta.url).href;
+    // const image = new URL('../images/banner_43.webp', import.meta.url).href;
     // console.log("Random Image:", image);
 
     checkHeroBackgroundAspectRatio(image)
