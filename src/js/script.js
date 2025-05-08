@@ -167,33 +167,41 @@ function checkHeroBackgroundAspectRatio(Url) {
 
 
 function updateActiveSection() {
-    // Get all sections
-    const sections = document.querySelectorAll('section');
-    // Get all sidebar list items
-    const navItems = document.querySelectorAll('.sidebar li');
-
-    const distance = 200;
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        const scrollPosition = window.scrollY;
-        
-        if (scrollPosition >= sectionTop - distance && 
-            scrollPosition < sectionTop + sectionHeight - distance) {
-            
-            // Remove active class from all list items
-            navItems.forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            // Add active class to corresponding list item
-            const correspondingLink = document.querySelector(`.sidebar a[href="#${section.id}"]`);
-            if (correspondingLink) {
-                correspondingLink.parentElement.classList.add('active');
+    // Collect all elements with an id referenced by the sidebar
+    const sidebarLinks = Array.from(document.querySelectorAll('.sidebar a[href^="#"]'));
+    const targets = sidebarLinks
+        .map(link => {
+            const id = link.getAttribute('href').slice(1);
+            const el = document.getElementById(id);
+            if (el) {
+                return { link, el };
             }
+            return null;
+        })
+        .filter(Boolean);
+
+    const scrollPosition = window.scrollY;
+    const distance = 200;
+
+    // Find the closest target above the scroll position
+    let bestMatch = null;
+    let bestOffset = -Infinity;
+    targets.forEach(({ link, el }) => {
+        const rect = el.getBoundingClientRect();
+        const offsetTop = window.scrollY + rect.top;
+        if (scrollPosition >= offsetTop - distance && offsetTop > bestOffset) {
+            bestMatch = link;
+            bestOffset = offsetTop;
         }
     });
+
+    // Remove active from all
+    document.querySelectorAll('.sidebar li').forEach(item => item.classList.remove('active'));
+
+    // Add active to the most specific match
+    if (bestMatch) {
+        bestMatch.parentElement.classList.add('active');
+    }
 }
 
 
@@ -333,10 +341,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+function handleSidebarVisibility() {
+    const sidebar = document.getElementById('sidebar');
+    const aboutMe = document.getElementById('about_me');
+
+    if (!sidebar || !aboutMe) return;
+
+    const aboutMeTop = aboutMe.getBoundingClientRect().top + window.scrollY;
+
+    if (window.scrollY + 70 < aboutMeTop) {
+        sidebar.classList.add('hidden');
+    }
+    else {
+        sidebar.classList.remove('hidden');
+    }
+}
+
+
+
+
 // Add event listeners
 window.addEventListener('scroll', () => {
     updateActiveSection();
     updateProgressBar();
+    handleSidebarVisibility();
 });
 
 
@@ -347,4 +375,5 @@ document.addEventListener('DOMContentLoaded', () => {
     updateActiveSection();
     updateCopyrightYear();
     updateProgressBar();
+    handleSidebarVisibility();
 });
