@@ -1210,7 +1210,8 @@
 
     <script>
         // Load Vercel Insight scripts only in production
-        const isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
+        // const isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
+        const isProduction = process.env.NODE_ENV === 'production';
       
         if (isProduction) {
           const insightsScript = document.createElement('script');
@@ -1223,7 +1224,7 @@
           speedScript.src = '/_vercel/speed-insights/script.js';
           document.body.appendChild(speedScript);
         }
-      </script>
+    </script>
 
 </body>
 

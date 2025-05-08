@@ -16,7 +16,7 @@
     "scripts": {
         "clean": "rimraf .parcel-cache dist",
         "build": "parcel build --target prod",
-        "start": "parcel"
+        "start": "parcel --open"
     },
     "repository": {
         "type": "git",
