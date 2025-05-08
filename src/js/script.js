@@ -44,22 +44,78 @@ const images = [
     new URL('../images/banner_42.webp', import.meta.url).href,
     new URL('../images/banner_43.webp', import.meta.url).href,
 ];
+
+
+// Parcel has to use static imports for images in Javascript files
+const mobileImages = [
+    new URL('../images/banner_1.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_2.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_3.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_4.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_5.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_6.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_7.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_8.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_9.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_10.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_11.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_12.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_13.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_14.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_15.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_16.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_17.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_18.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_19.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_20.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_21.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_22.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_23.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_24.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_25.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_26.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_27.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_28.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_29.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_30.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_31.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_32.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_33.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_34.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_35.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_36.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_37.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_38.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_39.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_40.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_41.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_42.webp?width=1200', import.meta.url).href,
+    new URL('../images/banner_43.webp?width=1200', import.meta.url).href,
+];
+
   
- document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const hero = document.getElementById("hero");
 
     const randomIndex = Math.floor(Math.random() * images.length);
     // console.log("randomIndex:", randomIndex);
 
-    const image = images[randomIndex];
+    // Check if the user is on a mobile device
+    const isMobile = window.innerWidth <= 767;
 
-    // const image = new URL('../images/banner_43.webp', import.meta.url).href;
+    let image;
+
+    if (isMobile) {
+        image = mobileImages[randomIndex];
+    } else {
+        image = images[randomIndex];
+        checkHeroBackgroundAspectRatio(image);
+    }
+
     // console.log("Random Image:", image);
 
-    checkHeroBackgroundAspectRatio(image)
-
     hero.style.backgroundImage = `url('${image}')`;
-  });
+});
 
 
 
