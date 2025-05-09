@@ -258,6 +258,11 @@ section li li {
 }
 
 
+.details-container ul li {
+    margin-bottom: 2%;
+}
+
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%; 
@@ -1106,6 +1111,11 @@ footer {
 
     .text-container.small-gap {
         margin-bottom: 7%;
+    }
+
+
+    .details-container ul li {
+        margin-bottom: 3%;
     }
 
 
