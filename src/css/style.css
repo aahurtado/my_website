@@ -263,6 +263,12 @@ section li li {
 }
 
 
+.details-container details {
+    display: inline-block;
+    cursor: pointer; 
+}
+
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%; 
