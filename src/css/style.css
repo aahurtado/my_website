@@ -549,10 +549,11 @@ nav.topbar .nav-links.right a:last-child {
 /* Side Navigation Bar */
 nav.sidebar {
     /* width: fit-content;  */
-    width: 240px; 
+    width: 250px; 
     height: fit-content; 
     position: fixed; 
     top: var(--nav-topbar-height-offset);
+    margin-top: 20px;
     right: 0;
     text-align: left;
     /* padding: 20px; */
