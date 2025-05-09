@@ -374,9 +374,9 @@
                     HEDIS measures are created and managed by the <a href="https://www.ncqa.org/" target="_blank" rel="noopener noreferrer">National Committee for Quality Assurance</a> (NCQA). NCQA is an independent nonprofit organization in the United States that works to improve health care quality through the administration of evidence-based standards, measures, programs, and accreditation. HEDIS includes over 90 clinical measures across six domains: effectiveness, access, experience, utilization, descriptive information, and electronic systems. HEDIS data is collected through surveys, medical charts and insurance claims for hospitalizations, medical office visits and procedures. 
                 </p>
 
-                <p>
+                <!-- <p>
                     Health care plans seek accreditation and measure performance through the administration and submission of HEDIS data. Health care plans must undergo a HEDIS Compliance Audit, which may only be performed by licensed organizations and certified auditors. NCQA publishes the results of the measures on their website. HEDIS was designed to allow consumers to compare health care plan performance and for national and regional benchmarks.
-                </p>
+                </p> -->
 
                 <p>
                     You can actually look up the rating of your healthcare plan on the <a href="https://reportcards.ncqa.org/health-plans" target="_blank" rel="noopener noreferrer">NCQA Health Plan Report Card website</a>.
@@ -389,17 +389,17 @@
                     </figure>
                 </div>
 
+                <h5>Backend Engine Overview</h5>
+                <p>
+                    To calculate the scores for HEDIS measures, we used our backend engine which was built in C++. You would give the engine a list of measures and a set of members from a certain population data set. Then, for each member, the engine would iterate over all of their health-care data from our database (e.g. medical charts, insurance claims, medical office visits, and procedures). Next, it would run all of their data through the list of specified measures and depending on the measure give them a pass/fail score. Some measures would output a numerical score based on certain criteria and calculations. Lastly, we would output all of the results in a JSON format which was then consumed and analyzed by our API team.
+                </p>
+
                 <h5>Example HEDIS Measures</h5>
                 <ul>
                     <li>Lead Screening in Children (LSC): The percentage of children 2 years of age who had one or more capillary or venous lead blood test for lead poisoning by their second birthday.</li>
                     <li>Breast Cancer Screening (BCS): assesses women 50–74 years of age who had at least one mammogram to screen for breast cancer in the past two years.</li>
                     <li>Annual Dental Visit (ADV): Assesses Medicaid members 2–20 years of age with dental benefits, who had at least one dental visit during the year.</li>
                 </ul>
-
-                <h5>Backend Engine Overview</h5>
-                <p>
-                    To calculate the scores for HEDIS measures, we used our backend engine which was built in C++. You would give the engine a list of measures and a set of members from a certain population data set. Then, for each member, the engine would iterate over all of their health-care data from our database (e.g. medical charts, insurance claims, medical office visits, and procedures). Next, it would run all of their data through the list of specified measures and depending on the measure give them a pass/fail score. Some measures would output a numerical score based on certain criteria and calculations. Lastly, we would output all of the results in a JSON format which was then consumed and analyzed by our API team.
-                </p>
 
                 <h5>What I did:</h5>
                 <p>
