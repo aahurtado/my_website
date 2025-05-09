@@ -548,7 +548,8 @@ nav.topbar .nav-links.right a:last-child {
 /* ***************************************************************************** */
 /* Side Navigation Bar */
 nav.sidebar {
-    width: fit-content; 
+    /* width: fit-content;  */
+    width: 240px; 
     height: fit-content; 
     position: fixed; 
     top: var(--nav-topbar-height-offset);
@@ -601,7 +602,7 @@ nav.sidebar li {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
-    padding-right: 14px;
+    padding-right: 10px;
     /* margin-right: 10px; */
     border-radius: 5px;
     transition: background-color 0.4s var(--transition-style) var(--transition-delay);  
@@ -1031,14 +1032,22 @@ footer {
 
 
 
+
+
 /* ***************************************************************************** */
-/* Handle mobile devices with width <= 767px */
-@media screen and (max-width: 767px) {
+/* Hide the side navbar with width <= 1350px */
+@media screen and (max-width: 1350px) {
     nav.sidebar {
         display: none;
     }
+}
 
 
+
+
+/* ***************************************************************************** */
+/* Handle mobile devices with width <= 767px */
+@media screen and (max-width: 767px) {
     :root {
         --nav-topbar-height-offset: 62px;
     }
