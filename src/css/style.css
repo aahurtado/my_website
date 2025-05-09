@@ -248,6 +248,16 @@ section li li {
 }
 
 
+.details-container {
+    margin-bottom: 6%;
+}
+
+
+.details-container ul {
+    list-style: none;
+}
+
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%; 
