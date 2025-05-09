@@ -527,7 +527,8 @@ nav.topbar .nav-links.right a:last-child {
 
 .progress-container {
     position: absolute;
-    top: calc(var(--nav-topbar-height-offset) - var(--nav-progress-bar-height));
+    /* top: calc(var(--nav-topbar-height-offset) - var(--nav-progress-bar-height)); */
+    top: var(--nav-topbar-height-offset);
     left: 0;
     width: 100%;
     height: var(--nav-progress-bar-height);
