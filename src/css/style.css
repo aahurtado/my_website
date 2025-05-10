@@ -615,28 +615,10 @@ nav.sidebar ul {
 }
 
 
-nav.sidebar ul ul {
-    /* padding-top: 1px; */
-    margin-left: 20px;
-}
-
-
 nav.sidebar li {
     margin: 2px 0;
     border-radius: 5px;
     transition: background-color 0.4s var(--transition-style) var(--transition-delay);  
-}
-
-
-nav.sidebar li li {
-    pointer-events: all;
-}
-
-
-nav.sidebar ul li:has(ul) {
-    /* padding-bottom: 0px; */
-    /* padding-right: 0px; */
-    pointer-events: none;
 }
 
 
@@ -649,15 +631,20 @@ nav.sidebar a {
     font-size: 0.88rem;
     letter-spacing: 0.02rem;
     cursor: pointer;
- }
+}
 
 
-nav.sidebar li:not(:has(ul)):hover {
+nav.sidebar li.indent {
+    margin-left: 20px;
+}
+
+
+nav.sidebar li:hover {
     background-color: var(--nav-link-sidebar-hover-color);
 }
 
 
-nav.sidebar li:not(:has(ul)).active {
+nav.sidebar li.active {
     background-color: var(--nav-link-sidebar-hover-color);
 }
 
