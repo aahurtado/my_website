@@ -37,9 +37,9 @@
     --website-main-width-ultrawide-2560: 50%;
     --website-main-width-ultrawide-3440: 40%;
 
-    --nav-topbar-height-offset: 70px;
+    --nav-topbar-height-offset: 71px;
     --nav-topbar-side-margins: 12px;
-    --nav-progress-bar-height: 3px;
+    --nav-progress-bar-height: 4px;
 
     --footer-content-min-width: 200px;
 
@@ -1058,7 +1058,8 @@ footer {
 /* Handle mobile devices with width <= 767px */
 @media screen and (max-width: 767px) {
     :root {
-        --nav-topbar-height-offset: 62px;
+        --nav-progress-bar-height: 4px;
+        --nav-topbar-height-offset: 61px;
     }
 
 
